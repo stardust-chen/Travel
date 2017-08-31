@@ -8,6 +8,6 @@ Vue.use(Router)
 export default new Router({
   routes: [
     { path: '/', component: Hello, },
-    { path: '/guangzhou', component: guangzhou, },
+    { path: '/guangzhou', meta: { title: '广州路书' }, component: guangzhou, },
   ]
 })
