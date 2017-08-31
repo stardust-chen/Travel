@@ -9,24 +9,52 @@
           <div class="TitleCenter">2017-09-08</div>
           <div class="TitleRight">星期五</div>
         </template>
-        <el-card class="box-card">
-          <div slot="header" class="clearfix flexbox">
+        <el-card class="box-card" @click.native="OpenDetail(0)">
+          <div slot="header" class="clearfix flexboxtitle">
             <span class="Titleflex1">飞机</span>
-            <a href="http://www.umetrip.com/mskyweb/fs/fc.do?flightNo=MU9315&date=2017-09-08&channel=" class="Titleflex2">MU9315</a>
-
-            <!-- <el-button style="float: right;" type="primary">操作按钮</el-button> -->
+            <span class="Titleflex2">中国东方航空&上海航空</span>
           </div>
-          <div v-for="o in 4" :key="o" class="text item">
-            {{'列表内容 ' + o }}
+          <div class="text item">
+            <div class="flexbox">
+              <span class="flex1">时间</span>
+              <span class="flex2">20:35 ~ 23:00</span>
+            </div>
+            <div class="flexbox">
+              <span class="flex1">From</span>
+              <span class="flex2">虹桥机场T2</span>
+            </div>
+            <div class="flexbox">
+              <span class="flex1">To</span>
+              <span class="flex2">白云机场</span>
+            </div>
+            <div class="flexbox">
+              <span class="flex1">备注</span>
+              <span class="flex2"></span>
+            </div>
           </div>
         </el-card>
-        <el-card class="box-card">
-          <div slot="header" class="clearfix">
-            <span>卡片名称</span>
-            <!-- <el-button style="float: right;" type="primary">操作按钮</el-button> -->
+        <el-card class="box-card" @click.native="OpenDetail(0)">
+          <div slot="header" class="clearfix flexboxtitle">
+            <span class="Titleflex1">飞机</span>
+            <span class="Titleflex2">中国东方航空&上海航空</span>
           </div>
-          <div v-for="o in 4" :key="o" class="text item">
-            {{'列表内容 ' + o }}
+          <div class="text item">
+            <div class="flexbox">
+              <span class="flex1">时间</span>
+              <span class="flex2">20:35 ~ 23:00</span>
+            </div>
+            <div class="flexbox">
+              <span class="flex1">From</span>
+              <span class="flex2">虹桥机场T2</span>
+            </div>
+            <div class="flexbox">
+              <span class="flex1">To</span>
+              <span class="flex2">白云机场</span>
+            </div>
+            <div class="flexbox">
+              <span class="flex1">备注</span>
+              <span class="flex2"></span>
+            </div>
           </div>
         </el-card>
 
@@ -39,8 +67,31 @@
           <div class="TitleRight">星期六</div>
 
         </template>
-        <div>控制反馈：通过界面样式和交互动效让用户可以清晰的感知自己的操作；</div>
-        <div>页面反馈：操作后，通过页面元素的变化清晰地展现当前状态。</div>
+        <el-card class="box-card" @click.native="OpenDetail(0)">
+          <div slot="header" class="clearfix flexboxtitle">
+            <span class="Titleflex1">飞机</span>
+            <span class="Titleflex2">中国东方航空&上海航空</span>
+          </div>
+          <div class="text item">
+            <div class="flexbox">
+              <span class="flex1">时间</span>
+              <span class="flex2">20:35 ~ 23:00</span>
+            </div>
+            <div class="flexbox">
+              <span class="flex1">From</span>
+              <span class="flex2">虹桥机场T2</span>
+            </div>
+            <div class="flexbox">
+              <span class="flex1">To</span>
+              <span class="flex2">白云机场</span>
+            </div>
+            <div class="flexbox">
+              <span class="flex1">备注</span>
+              <span class="flex2"></span>
+            </div>
+          </div>
+        </el-card>
+
       </el-collapse-item>
       <div class="clear"></div>
 
@@ -51,9 +102,31 @@
           <div class="TitleRight">星期日</div>
 
         </template>
-        <div>简化流程：设计简洁直观的操作流程；</div>
-        <div>清晰明确：语言表达清晰且表意明确，让用户快速理解进而作出决策；</div>
-        <div>帮助用户识别：界面简单直白，让用户快速识别而非回忆，减少用户记忆负担。</div>
+        <el-card class="box-card" @click.native="OpenDetail(0)">
+          <div slot="header" class="clearfix flexboxtitle">
+            <span class="Titleflex1">飞机</span>
+            <span class="Titleflex2">中国东方航空&上海航空</span>
+          </div>
+          <div class="text item">
+            <div class="flexbox">
+              <span class="flex1">时间</span>
+              <span class="flex2">20:35 ~ 23:00</span>
+            </div>
+            <div class="flexbox">
+              <span class="flex1">From</span>
+              <span class="flex2">虹桥机场T2</span>
+            </div>
+            <div class="flexbox">
+              <span class="flex1">To</span>
+              <span class="flex2">白云机场</span>
+            </div>
+            <div class="flexbox">
+              <span class="flex1">备注</span>
+              <span class="flex2"></span>
+            </div>
+          </div>
+        </el-card>
+
       </el-collapse-item>
       <div class="clear"></div>
 
@@ -64,8 +137,31 @@
           <div class="TitleRight">星期一</div>
 
         </template>
-        <div>用户决策：根据场景可给予用户操作建议或安全提示，但不能代替用户进行决策；</div>
-        <div>结果可控：用户可以自由的进行操作，包括撤销、回退和终止当前操作等。</div>
+        <el-card class="box-card" @click.native="OpenDetail(0)">
+          <div slot="header" class="clearfix flexboxtitle">
+            <span class="Titleflex1">飞机</span>
+            <span class="Titleflex2">中国东方航空&上海航空</span>
+          </div>
+          <div class="text item">
+            <div class="flexbox">
+              <span class="flex1">时间</span>
+              <span class="flex2">20:35 ~ 23:00</span>
+            </div>
+            <div class="flexbox">
+              <span class="flex1">From</span>
+              <span class="flex2">虹桥机场T2</span>
+            </div>
+            <div class="flexbox">
+              <span class="flex1">To</span>
+              <span class="flex2">白云机场</span>
+            </div>
+            <div class="flexbox">
+              <span class="flex1">备注</span>
+              <span class="flex2"></span>
+            </div>
+          </div>
+        </el-card>
+
       </el-collapse-item>
       <div class="clear"></div>
 
@@ -76,8 +172,31 @@
           <div class="TitleRight">星期二</div>
 
         </template>
-        <div>用户决策：根据场景可给予用户操作建议或安全提示，但不能代替用户进行决策；</div>
-        <div>结果可控：用户可以自由的进行操作，包括撤销、回退和终止当前操作等。</div>
+        <el-card class="box-card" @click.native="OpenDetail(0)">
+          <div slot="header" class="clearfix flexboxtitle">
+            <span class="Titleflex1">飞机</span>
+            <span class="Titleflex2">中国东方航空&上海航空</span>
+          </div>
+          <div class="text item">
+            <div class="flexbox">
+              <span class="flex1">时间</span>
+              <span class="flex2">20:35 ~ 23:00</span>
+            </div>
+            <div class="flexbox">
+              <span class="flex1">From</span>
+              <span class="flex2">虹桥机场T2</span>
+            </div>
+            <div class="flexbox">
+              <span class="flex1">To</span>
+              <span class="flex2">白云机场</span>
+            </div>
+            <div class="flexbox">
+              <span class="flex1">备注</span>
+              <span class="flex2"></span>
+            </div>
+          </div>
+        </el-card>
+
       </el-collapse-item>
       <div class="clear"></div>
 
@@ -87,8 +206,31 @@
           <div class="TitleCenter">2017-09-12</div>
           <div class="TitleRight">星期三</div>
         </template>
-        <div>用户决策：根据场景可给予用户操作建议或安全提示，但不能代替用户进行决策；</div>
-        <div>结果可控：用户可以自由的进行操作，包括撤销、回退和终止当前操作等。</div>
+        <el-card class="box-card" @click.native="OpenDetail(0)">
+          <div slot="header" class="clearfix flexboxtitle">
+            <span class="Titleflex1">飞机</span>
+            <span class="Titleflex2">中国东方航空&上海航空</span>
+          </div>
+          <div class="text item">
+            <div class="flexbox">
+              <span class="flex1">时间</span>
+              <span class="flex2">20:35 ~ 23:00</span>
+            </div>
+            <div class="flexbox">
+              <span class="flex1">From</span>
+              <span class="flex2">虹桥机场T2</span>
+            </div>
+            <div class="flexbox">
+              <span class="flex1">To</span>
+              <span class="flex2">白云机场</span>
+            </div>
+            <div class="flexbox">
+              <span class="flex1">备注</span>
+              <span class="flex2"></span>
+            </div>
+          </div>
+        </el-card>
+
       </el-collapse-item>
     </el-collapse>
   </div>
@@ -104,6 +246,11 @@ export default {
   },
   created() {
     document.getElementsByTagName("title")[0].innerText = this.$route.meta.title;
+  },
+  methods: {
+    OpenDetail: function(val) {
+      this.$router.push('/Detail/' + val)
+    }
   }
 }
 </script>
@@ -125,15 +272,11 @@ li {
   margin: 0 10px;
 }
 
-a {
-  color: #42b983;
-}
 
 .mint-header {
   background-color: #1D8CE0 !important;
   height: 45px !important;
   font-size: 18px;
-  ;
 }
 
 .el-collapse-item__header__arrow.el-icon-arrow-right {
@@ -186,18 +329,25 @@ a {
 
 .el-card__header {
   padding: 10px 20px;
+  background: #20A0FF;
 }
 
 .el-collapse-item__content {
   padding: 0px 15px;
 }
 
+.el-collapse-item__wrap {
+  background-color: #708090;
+}
+
 .el-card .span {
   line-height: 10px;
 }
 
-.flexbox {
+.flexboxtitle {
   display: flex;
+  color: white;
+  font-size: 16px;
 }
 
 .Titleflex1 {
@@ -207,6 +357,21 @@ a {
 
 .Titleflex2 {
   flex: 4;
+  padding-left: 10px;
+}
+
+.flexbox {
+  display: flex;
+  font-size: 14px;
+  margin: 5px;
+}
+
+.flex1 {
+  flex: 1;
+}
+
+.flex2 {
+  flex: 3;
   padding-left: 10px;
 }
 </style>
