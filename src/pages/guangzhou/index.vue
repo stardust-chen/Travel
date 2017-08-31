@@ -324,20 +324,20 @@ li {
 }
 
 .el-card {
-  margin: 15px 0px;
+  margin: 15px 0px !important;
 }
 
 .el-card__header {
-  padding: 10px 20px;
+  padding: 10px 20px !important;
   background: #20A0FF;
 }
 
 .el-collapse-item__content {
-  padding: 0px 15px;
+  padding: 0px 15px !important;
 }
 
 .el-collapse-item__wrap {
-  background-color: #708090;
+  background-color: #708090 !important;
 }
 
 .el-card .span {
