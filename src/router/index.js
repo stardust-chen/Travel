@@ -10,7 +10,7 @@ export default new Router({
   routes: [
     { path: '/', component: Hello, },
     { path: '/guangzhou', meta: { title: '广州路书' }, component: guangzhou, },
-    { path: '/Detail/:id', meta: { title: '详细信息' }, component: Detail },
+    // { path: '/Detail/:id', meta: { title: '详细信息' }, component: Detail },
 
   ]
 })
