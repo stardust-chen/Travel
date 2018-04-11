@@ -192,7 +192,7 @@ export default {
                 "<a href='http://www.tokyometro.jp/lang_en/station/rosen_cs_1803.pdf'>东京地铁线路图</a>"
             }
           ],
-          url: ""
+          url: false
         },
         {
           Type: "hotelHeader",
@@ -204,7 +204,7 @@ export default {
             {
               key: "地址",
               value:
-                "2 Chome-4-5 Nihonbashibakurochō, 中央区, 东京市 103-0002, 日本"
+                "<a href='http://google.com/maps/place/2+Chome-4-5+Nihonbashibakuroch%C5%8D%2B%E4%B8%AD%E5%A4%AE%E5%8C%BA%2C+%E4%B8%9C%E4%BA%AC%E5%B8%82+103-0002%2B%E6%97%A5%E6%9C%AC'>2 Chome-4-5 Nihonbashibakurochō, 中央区, 东京市 103-0002, 日本</a>"
             },
             { key: "房东", value: "Torinoth" },
             {
@@ -224,8 +224,7 @@ export default {
               value: "阳台上有三个大的垃圾箱，请务必把垃圾分类扔进去；"
             }
           ],
-          url:
-            "http://google.com/maps/place/2+Chome-4-5+Nihonbashibakuroch%C5%8D%2B%E4%B8%AD%E5%A4%AE%E5%8C%BA%2C+%E4%B8%9C%E4%BA%AC%E5%B8%82+103-0002%2B%E6%97%A5%E6%9C%AC"
+          url: false
         }
       ],
       cardDataDay2: [],
@@ -297,123 +296,7 @@ export default {
     document.getElementsByTagName("title")[0].innerText =
       "2018意大利炮征战霓虹";
   },
-  methods: {
-    // 点击card打开详情
-    OpenDetail: function(val) {
-      // this.$router.push('/Detail/' + val)
-      switch (val) {
-        case -1:
-          window.location.href = "http://www.baidu.com";
-          break;
-        case 0:
-          //  携程NH968
-          window.location.href =
-            "https://m.ctrip.com/webapp/hybrid/schedule/detail.html?navBarStyle=gray&queryDate=2018-05-09&flightNo=NH968&queryType=1&fromurl=https%3A%2F%2Fm.ctrip.com%2Fwebapp%2Fhybrid%2Fschedule%2Fsearch.html";
-          break;
-        case 1:
-          // 全季
-          window.location.href = "http://m.dianping.com/shop/38152022";
-          break;
-        case 2:
-          // 喜茶
-          window.location.href = "https://m.dianping.com/shop/27011586";
-          break;
-        case 3:
-          // 芳叔
-          window.location.href = "https://m.dianping.com/shop/15926818";
-          break;
-        case 4:
-          // 携程NH967
-          window.location.href =
-            "https://m.ctrip.com/webapp/hybrid/schedule/detail.html?navBarStyle=gray&queryDate=2018-05-14&flightNo=NH967&queryType=1&fromurl=https%3A%2F%2Fm.ctrip.com%2Fwebapp%2Fhybrid%2Fschedule%2Fsearch.html";
-          break;
-        case 5:
-          // 铂尔曼
-          window.location.href = "https://m.dianping.com/shop/2333011";
-          break;
-        case 6:
-          // 长隆欢乐世界
-          window.location.href = "https://m.dianping.com/shop/1880545";
-          break;
-        case 7:
-          // 点都德和兴楼
-          window.location.href = "https://m.dianping.com/shop/77343125";
-          break;
-        case 8:
-          // 陶陶居正佳
-          window.location.href = "https://m.dianping.com/shop/23461615";
-          break;
-        case 9:
-          // 九龙冰室正佳
-          window.location.href = "https://m.dianping.com/shop/20731966";
-          break;
-        case 10:
-          // 炸鸡
-          window.location.href = "https://m.dianping.com/shop/19276441";
-          break;
-        case 11:
-          // 星美乐
-          window.location.href = "https://m.dianping.com/shop/66188262";
-          break;
-        case 12:
-          // 炳胜品味(天河店)
-          window.location.href = "https://m.dianping.com/shop/518913";
-          break;
-        case 13:
-          // 炳胜品味(珠江新城店)
-          window.location.href = "https://m.dianping.com/shop/2954893";
-          break;
-        case 14:
-          // 广州塔
-          window.location.href =
-            "http://m.ctrip.com/webapp/ticket/dest/t107540.html";
-          break;
-        case 15:
-          // 珠江夜游
-          window.location.href =
-            "https://h5.m.taobao.com/trip/search/list/index.html?searchType=%E9%97%A8%E7%A5%A8&keyword=%E7%8F%A0%E6%B1%9F%E5%A4%9C%E6%B8%B8&_req_param_=%7B%22searchQuery%22%3A%22%E7%8F%A0%E6%B1%9F%E5%A4%9C%E6%B8%B8%22%7D&globalSearchSource=default&rword=%E7%8F%A0%E6%B1%9F%E5%A4%9C%E6%B8%B8&isFromFZSeHome=1&spm=181.7871893.1998854396.0701&ttid=12bai0000004&_projVer=0.2.53";
-          break;
-        case 16:
-          // 北京路
-          window.location.href =
-            "https://m.dianping.com/shoplist/4/search?from=m_search&keyword=%E5%8C%97%E4%BA%AC%E8%B7%AF";
-          break;
-        case 17:
-          // 仁信双皮奶
-          window.location.href = "https://m.dianping.com/shop/50322315";
-          break;
-        case 18:
-          // 百花甜品店
-          window.location.href = "https://m.dianping.com/shop/520004";
-          break;
-        case 19:
-          // 上下九
-          window.location.href =
-            "https://m.dianping.com/shoplist/4/search?from=m_search&keyword=%E4%B8%8A%E4%B8%8B%E4%B9%9D%E6%AD%A5%E8%A1%8C%E8%A1%97&from_suggest=history";
-          break;
-        case 20:
-          // 沙面
-          window.location.href = "https://m.dianping.com/shop/1596313";
-          break;
-        case 21:
-          // 陶然轩
-          window.location.href = "https://m.dianping.com/shop/519515";
-          break;
-        case 22:
-          // 长隆水上乐园
-          window.location.href =
-            "https://h5.m.taobao.com/trip/ticket/detail/index.html";
-          break;
-        case 23:
-          // 长隆欢乐世界
-          // window.location.href = "https://h5.m.taobao.com/trip/ticket/detail/index.html";
-          break;
-
-        default:
-          break;
-      }
-    }
-  }
+  methods: {}
 };
 </script>
 

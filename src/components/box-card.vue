@@ -60,6 +60,9 @@ export default {
   //   },
   methods: {
     OpenDetail: url => {
+      if (url == false) {
+        return;
+      }
       window.location.href = url;
     }
   }
