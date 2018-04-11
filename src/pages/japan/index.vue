@@ -12,7 +12,7 @@
       <mt-tab-container-item id="1">
         <!-- <div style="height = 4px;">&nbsp;</div> -->
         <!-- 日期模式选项卡内容 -->
-        <el-collapse accordion>
+      <el-collapse accordion>
           <!-- 5-9 -->
           <el-collapse-item>
             <template slot="title">
@@ -20,297 +20,69 @@
               <div class="TitleCenter">2018-05-09</div>
               <div class="TitleRight">星期三</div>
             </template>
-            <!-- NH968 -->
-            <el-card class="box-card flightHeader" @click.native="OpenDetail(0)">
-              <div slot="header" class="clearfix flexboxtitle">
-                <span class="Titleflex1">飞机</span>
-                <span class="Titleflex2">全日空航空 NH968</span>
-              </div>
-              <div class="text item">
-                <div class="flexbox">
-                  <span class="flex1">时间</span>
-                  <span class="flex2">01:45 ~ 05:40</span>
-                </div>
-                <div class="flexbox">
-                  <span class="flex1">From</span>
-                  <span class="flex2">上海浦东国际机场T2</span>
-                </div>
-                <div class="flexbox">
-                  <span class="flex1">To</span>
-                  <span class="flex2">日本东京羽田航空港</span>
-                </div>
-                <div class="flexbox">
-                  <span class="flex1">备注</span>
-                  <span class="flex2">携程航班动态</span>
-                </div>
-              </div>
-            </el-card>
-            <!-- 白云机场接机 -->
-            <el-card class="box-card transportHeader">
-              <div slot="header" class="clearfix flexboxtitle">
-                <span class="Titleflex1">接机</span>
-                <span class="Titleflex2">飞猪旅行</span>
-              </div>
-              <div class="text item">
-                <div class="flexbox">
-                  <span class="flex1">时间</span>
-                  <span class="flex2">00:00 ~ 00:00</span>
-                </div>
-                <div class="flexbox">
-                  <span class="flex1">From</span>
-                  <span class="flex2">日本东京羽田航空港</span>
-                </div>
-                <div class="flexbox">
-                  <span class="flex1">To</span>
-                  <span class="flex2">xxxxxxxxx</span>
-                </div>
-                <div class="flexbox">
-                  <span class="flex1">司机</span>
-                  <span class="flex2">曾奎新&nbsp;&nbsp;&nbsp;&nbsp;
-                    <a href="tel:18620188634">18620188634</a>
-                  </span>
-                </div>
-                <div class="flexbox">
-                  <span class="flex1">备注</span>
-                  <span class="flex2">粤A7HJ70&nbsp;&nbsp;&nbsp;免费等待一小时</span>
-                </div>
-              </div>
-            </el-card>
+            <!-- 卡片渲染 -->
+            <boxcard v-for="(item,index) in cardDataDay1" :key="index" :data="item">
+            </boxcard>
           </el-collapse-item>
           <div class="clear"></div>
-          <!-- 9-9 -->
+          <!-- 5-10 -->
           <el-collapse-item>
             <template slot="title">
               <div class="TitleLeft">Day 2</div>
               <div class="TitleCenter">2018-05-10</div>
               <div class="TitleRight">星期四</div>
-
             </template>
-            <!-- 全季酒店 -->
-            <el-card class="box-card hotelHeader" @click.native="OpenDetail(1)">
-              <div slot="header" class="clearfix flexboxtitle">
-                <span class="Titleflex1">酒店</span>
-                <span class="Titleflex2"></span>
-              </div>
-              <div class="text item">
-                <div class="flexbox">
-                  <span class="flex1">地址</span>
-                  <span class="flex2"></span>
-                </div>
-                <div class="flexbox">
-                  <span class="flex1">电话</span>
-                  <span class="flex2">
-                    <a href="tel:020-38770000">020-38770000</a>
-                  </span>
-                </div>
-                <div class="flexbox">
-                  <span class="flex1">备注</span>
-                  <span class="flex2"></span>
-                </div>
-              </div>
-            </el-card>
+            <!-- 卡片渲染 -->
+            <boxcard v-for="(item,index) in cardDataDay2" :key="index" :data="item">
+            </boxcard>
           </el-collapse-item>
           <div class="clear"></div>
-          <!-- 9-10 -->
+          <!-- 5-11 -->
           <el-collapse-item>
             <template slot="title">
               <div class="TitleLeft">Day 3</div>
               <div class="TitleCenter">2018-05-11</div>
               <div class="TitleRight">星期五</div>
             </template>
-            <!-- 北京路步行街 -->
-            <el-card class="box-card sceneryHeader" @click.native="OpenDetail(16)">
-              <div slot="header" class="clearfix flexboxtitle">
-                <span class="Titleflex1">景点</span>
-                <span class="Titleflex2">北京路步行街</span>
-              </div>
-              <div class="text item">
-                <div class="flexbox">
-                  <span class="flex1">地铁</span>
-                  <span class="flex2">6号线 北京路 AB出口皆可</span>
-                </div>
-                <div class="flexbox">
-                  <span class="flex1">备注</span>
-                  <span class="flex2">陶陶居(这是个面包店)
-                    <br> 仁信双皮奶
-                    <br> 百花甜品店
-                  </span>
-                </div>
-              </div>
-            </el-card>
-            <!-- 仁信双皮奶 -->
-            <el-card class="box-card foodHeader" @click.native="OpenDetail(17)">
-              <div slot="header" class="clearfix flexboxtitle">
-                <span class="Titleflex1">美食</span>
-                <span class="Titleflex2">仁信双皮奶</span>
-              </div>
-              <div class="text item">
-                <div class="flexbox">
-                  <span class="flex1">地址</span>
-                  <span class="flex2">惠福东路553号(近摩登百货)</span>
-                </div>
-                <div class="flexbox">
-                  <span class="flex1">地铁</span>
-                  <span class="flex2">6号线 北京路 AB出口皆可</span>
-                </div>
-                <div class="flexbox">
-                  <span class="flex1">备注</span>
-                  <span class="flex2">红豆双皮奶</span>
-                </div>
-              </div>
-            </el-card>
-            <!-- 珠江游船 -->
-            <el-card class="box-card sceneryHeader" @click.native="OpenDetail(15)">
-              <div slot="header" class="clearfix flexboxtitle">
-                <span class="Titleflex1">景点</span>
-                <span class="Titleflex2">珠江游船</span>
-              </div>
-              <div class="text item">
-                <div class="flexbox">
-                  <span class="flex1">上船时间</span>
-                  <span class="flex2">建议19:00 ~ 20:00</span>
-                </div>
-                <div class="flexbox">
-                  <span class="flex1">上船地址</span>
-                  <span class="flex2">沿江东路466号大沙头码头</span>
-                </div>
-                <div class="flexbox">
-                  <span class="flex1">预约电话</span>
-                  <span class="flex2">17070858288</span>
-                </div>
-                <div class="flexbox">
-                  <span class="flex1">地铁</span>
-                  <span class="flex2">6号线 东湖站 A出口</span>
-                </div>
-
-              </div>
-            </el-card>
+            <!-- 卡片渲染 -->
+            <boxcard v-for="(item,index) in cardDataDay3" :key="index" :data="item">
+            </boxcard>
           </el-collapse-item>
           <div class="clear"></div>
-          <!-- 9-11 -->
+          <!-- 5-12 -->
           <el-collapse-item>
             <template slot="title">
               <div class="TitleLeft">Day 4</div>
               <div class="TitleCenter">2018-05-12</div>
               <div class="TitleRight">星期六</div>
             </template>
-            <!-- 长隆水上乐园 -->
-            <el-card class="box-card sceneryHeader" @click.native="OpenDetail(22)">
-              <div slot="header" class="clearfix flexboxtitle">
-                <span class="Titleflex1">景点</span>
-                <span class="Titleflex2">长隆水上乐园</span>
-              </div>
-              <div class="text item">
-                <div class="flexbox">
-                  <span class="flex1">地址</span>
-                  <span class="flex2">广东省广州市番禺区迎宾路长隆旅游度假区内</span>
-                </div>
-                <div class="flexbox">
-                  <span class="flex1">地铁</span>
-                  <span class="flex2">3/7号线 汉溪长隆 D/E号口</span>
-                </div>
-                <div class="flexbox">
-                  <span class="flex1">备注</span>
-                  <span class="flex2">九月: 09:30 ~ 18:30</span>
-                </div>
-              </div>
-            </el-card>
-
+            <!-- 卡片渲染 -->
+            <boxcard v-for="(item,index) in cardDataDay4" :key="index" :data="item">
+            </boxcard>
           </el-collapse-item>
           <div class="clear"></div>
-          <!-- 9-12 -->
+          <!-- 5-13 -->
           <el-collapse-item>
             <template slot="title">
               <div class="TitleLeft">Day 5</div>
               <div class="TitleCenter">2018-05-13</div>
               <div class="TitleRight">星期日</div>
             </template>
-            <!-- 长隆欢乐世界 -->
-            <el-card class="box-card sceneryHeader" @click.native="OpenDetail(23)">
-              <div slot="header" class="clearfix flexboxtitle">
-                <span class="Titleflex1">景点</span>
-                <span class="Titleflex2">长隆欢乐世界</span>
-              </div>
-              <div class="text item">
-                <div class="flexbox">
-                  <span class="flex1">地址</span>
-                  <span class="flex2">广东省广州市番禺区迎宾路长隆旅游度假区内</span>
-                </div>
-                <div class="flexbox">
-                  <span class="flex1">地铁</span>
-                  <span class="flex2">3/7号线 汉溪长隆 D/E号口</span>
-                </div>
-                <div class="flexbox">
-                  <span class="flex1">备注</span>
-                  <span class="flex2"></span>
-                </div>
-              </div>
-            </el-card>
-            <!-- 铂尔曼 -->
-            <el-card class="box-card hotelHeader" @click.native="OpenDetail(5)">
-              <div slot="header" class="clearfix flexboxtitle">
-                <span class="Titleflex1">酒店</span>
-                <span class="Titleflex2">广州白云机场铂尔曼大酒店</span>
-              </div>
-              <div class="text item">
-                <div class="flexbox">
-                  <span class="flex1">地址</span>
-                  <span class="flex2">白云国际机场出发厅13号门正对面</span>
-                </div>
-                <div class="flexbox">
-                  <span class="flex1">电话</span>
-                  <span class="flex2">
-                    <a href="tel:4001208819">4001208819</a>
-                  </span>
-                </div>
-                <div class="flexbox">
-                  <span class="flex1">电话</span>
-                  <span class="flex2">
-                    <a href="tel:020-36068866">020-36068866</a>
-                  </span>
-                </div>
-                <div class="flexbox">
-                  <span class="flex1">地铁</span>
-                  <span class="flex2">3号线 机场南 A/D号口</span>
-                </div>
-              </div>
-            </el-card>
-
+            <!-- 卡片渲染 -->
+            <boxcard v-for="(item,index) in cardDataDay5" :key="index" :data="item">
+            </boxcard>
           </el-collapse-item>
           <div class="clear"></div>
-          <!-- 9-13 -->
+          <!-- 5-14 -->
           <el-collapse-item>
             <template slot="title">
               <div class="TitleLeft">Day 6</div>
               <div class="TitleCenter">2018-05-14</div>
               <div class="TitleRight">星期一</div>
             </template>
-            <!-- NH968 -->
-            <el-card class="box-card flightHeader" @click.native="OpenDetail(0)">
-              <div slot="header" class="clearfix flexboxtitle">
-                <span class="Titleflex1">飞机</span>
-                <span class="Titleflex2">全日空航空 NH968</span>
-              </div>
-              <div class="text item">
-                <div class="flexbox">
-                  <span class="flex1">时间</span>
-                  <span class="flex2">01:45 ~ 05:40</span>
-                </div>
-                <div class="flexbox">
-                  <span class="flex1">From</span>
-                  <span class="flex2">上海浦东国际机场T2</span>
-                </div>
-                <div class="flexbox">
-                  <span class="flex1">To</span>
-                  <span class="flex2">日本东京羽田航空港</span>
-                </div>
-                <div class="flexbox">
-                  <span class="flex1">备注</span>
-                  <span class="flex2">携程航班动态</span>
-                </div>
-              </div>
-            </el-card>
-
+            <!-- 卡片渲染 -->
+            <boxcard v-for="(item,index) in cardDataDay6" :key="index" :data="item">
+            </boxcard>
           </el-collapse-item>
         </el-collapse>
 
@@ -324,57 +96,9 @@
               <div class="TitleLeft">飞机</div>
             </template>
 
-            <!-- NH968 -->
-            <el-card class="box-card flightHeader" @click.native="OpenDetail(0)">
-              <div slot="header" class="clearfix flexboxtitle">
-                <span class="Titleflex1">飞机</span>
-                <span class="Titleflex2">全日空航空 NH968</span>
-              </div>
-              <div class="text item">
-                <div class="flexbox">
-                  <span class="flex1">时间</span>
-                  <span class="flex2">01:45 ~ 05:40</span>
-                </div>
-                <div class="flexbox">
-                  <span class="flex1">From</span>
-                  <span class="flex2">上海浦东国际机场T2</span>
-                </div>
-                <div class="flexbox">
-                  <span class="flex1">To</span>
-                  <span class="flex2">日本东京羽田航空港</span>
-                </div>
-                <div class="flexbox">
-                  <span class="flex1">备注</span>
-                  <span class="flex2">携程航班动态</span>
-                </div>
-              </div>
-            </el-card>
-
-            <!-- NH967 -->
-            <el-card class="box-card flightHeader" @click.native="OpenDetail(4)">
-              <div slot="header" class="clearfix flexboxtitle">
-                <span class="Titleflex1">飞机</span>
-                <span class="Titleflex2">全日空航空 NH967</span>
-              </div>
-              <div class="text item">
-                <div class="flexbox">
-                  <span class="flex1">时间</span>
-                  <span class="flex2">22:30 ~ 00:35</span>
-                </div>
-                <div class="flexbox">
-                  <span class="flex1">From</span>
-                  <span class="flex2">日本东京羽田航空港</span>
-                </div>
-                <div class="flexbox">
-                  <span class="flex1">To</span>
-                  <span class="flex2">上海浦东国际机场T2</span>
-                </div>
-                <div class="flexbox">
-                  <span class="flex1">备注</span>
-                  <span class="flex2">携程航班动态</span>
-                </div>
-              </div>
-            </el-card>
+            <!-- 卡片渲染 -->
+            <boxcard v-for="(item,index) in cardDataFilght" :key="index" :data="item">
+            </boxcard>
 
           </el-collapse-item>
           <!-- 酒店 -->
@@ -382,58 +106,9 @@
             <template slot="title">
               <div class="TitleLeft">酒店</div>
             </template>
-            <!-- 全季酒店 -->
-            <el-card class="box-card hotelHeader" @click.native="OpenDetail(1)">
-              <div slot="header" class="clearfix flexboxtitle">
-                <span class="Titleflex1">酒店</span>
-                <span class="Titleflex2">全季酒店广州火车东站店</span>
-              </div>
-              <div class="text item">
-                <div class="flexbox">
-                  <span class="flex1">地址</span>
-                  <span class="flex2">林和中路180号</span>
-                </div>
-                <div class="flexbox">
-                  <span class="flex1">电话</span>
-                  <span class="flex2">
-                    <a href="tel:020-38770000">020-38770000</a>
-                  </span>
-                </div>
-                <div class="flexbox">
-                  <span class="flex1">地铁</span>
-                  <span class="flex2">3号线 广州东站 F号口</span>
-                </div>
-              </div>
-            </el-card>
-            <!-- 铂尔曼 -->
-            <el-card class="box-card hotelHeader" @click.native="OpenDetail(5)">
-              <div slot="header" class="clearfix flexboxtitle">
-                <span class="Titleflex1">酒店</span>
-                <span class="Titleflex2">广州白云机场铂尔曼大酒店</span>
-              </div>
-              <div class="text item">
-                <div class="flexbox">
-                  <span class="flex1">地址</span>
-                  <span class="flex2">白云国际机场出发厅13号门正对面</span>
-                </div>
-                <div class="flexbox">
-                  <span class="flex1">电话</span>
-                  <span class="flex2">
-                    <a href="tel:4001208819">4001208819</a>
-                  </span>
-                </div>
-                <div class="flexbox">
-                  <span class="flex1">电话</span>
-                  <span class="flex2">
-                    <a href="tel:020-36068866">020-36068866</a>
-                  </span>
-                </div>
-                <div class="flexbox">
-                  <span class="flex1">地铁</span>
-                  <span class="flex2">3号线 机场南 A/D号口</span>
-                </div>
-              </div>
-            </el-card>
+            <!-- 卡片渲染 -->
+            <boxcard v-for="(item,index) in cardDataDay1" :key="index" :data="item">
+            </boxcard>
           </el-collapse-item>
 
           <!-- 景点 -->
@@ -441,157 +116,9 @@
             <template slot="title">
               <div class="TitleLeft">景点</div>
             </template>
-            <!-- 广州塔 -->
-            <el-card class="box-card sceneryHeader" @click.native="OpenDetail(14)">
-              <div slot="header" class="clearfix flexboxtitle">
-                <span class="Titleflex1">景点</span>
-                <span class="Titleflex2">广州塔</span>
-              </div>
-              <div class="text item">
-                <div class="flexbox">
-                  <span class="flex1">地址</span>
-                  <span class="flex2">阅江西路222号首层</span>
-                </div>
-                <div class="flexbox">
-                  <span class="flex1">地铁</span>
-                  <span class="flex2">APM线/3号线 广州塔 AB出口反面</span>
-                </div>
-                <div class="flexbox">
-                  <span class="flex1">备注</span>
-                  <span class="flex2">广州塔：9:30-22:30<br> 摩天轮：15:00-22:30(星期一)/10:00-22:30(周二-周日)
-                    <br> 极速云霄：12:00-22:30(星期一)/10:00-22:30(周二-周日)
-                    <br> 携程： 游玩前1天23:00前预订
-                  </span>
-                </div>
-              </div>
-            </el-card>
-            <!-- 北京路步行街 -->
-            <el-card class="box-card sceneryHeader" @click.native="OpenDetail(16)">
-              <div slot="header" class="clearfix flexboxtitle">
-                <span class="Titleflex1">景点</span>
-                <span class="Titleflex2">北京路步行街</span>
-              </div>
-              <div class="text item">
-                <div class="flexbox">
-                  <span class="flex1">地铁</span>
-                  <span class="flex2">6号线 北京路 AB出口皆可</span>
-                </div>
-                <div class="flexbox">
-                  <span class="flex1">备注</span>
-                  <span class="flex2">陶陶居(这是个面包店)
-                    <br> 仁信双皮奶
-                    <br> 百花甜品店
-                  </span>
-                </div>
-              </div>
-            </el-card>
-            <!-- 上下九步行街 -->
-            <el-card class="box-card sceneryHeader" @click.native="OpenDetail(19)">
-              <div slot="header" class="clearfix flexboxtitle">
-                <span class="Titleflex1">景点</span>
-                <span class="Titleflex2">上下九步行街</span>
-              </div>
-              <div class="text item">
-                <div class="flexbox">
-                  <span class="flex1">地铁</span>
-                  <span class="flex2">1/6号线 黄沙 下地铁摩拜
-                    <br> 1号线 长寿路 边上恒宝广场有美心西饼
-                  </span>
-                </div>
-                <div class="flexbox">
-                  <span class="flex1">备注</span>
-                  <span class="flex2">和沙面可以一起去
-                  </span>
-                </div>
-              </div>
-            </el-card>
-            <!-- 沙面 -->
-            <el-card class="box-card sceneryHeader" @click.native="OpenDetail(20)">
-              <div slot="header" class="clearfix flexboxtitle">
-                <span class="Titleflex1">景点</span>
-                <span class="Titleflex2">沙面</span>
-              </div>
-              <div class="text item">
-                <div class="flexbox">
-                  <span class="flex1">地铁</span>
-                  <span class="flex2">1/6号线 黄沙 E/F号口
-                  </span>
-                </div>
-                <div class="flexbox">
-                  <span class="flex1">备注</span>
-                  <span class="flex2">陶然轩
-                  </span>
-                </div>
-              </div>
-            </el-card>
-            <!-- 珠江游船 -->
-            <el-card class="box-card sceneryHeader" @click.native="OpenDetail(15)">
-              <div slot="header" class="clearfix flexboxtitle">
-                <span class="Titleflex1">景点</span>
-                <span class="Titleflex2">珠江游船</span>
-              </div>
-              <div class="text item">
-                <div class="flexbox">
-                  <span class="flex1">上船时间</span>
-                  <span class="flex2">建议19:00 ~ 20:00</span>
-                </div>
-                <div class="flexbox">
-                  <span class="flex1">上船地址</span>
-                  <span class="flex2">沿江东路466号大沙头码头</span>
-                </div>
-                <div class="flexbox">
-                  <span class="flex1">预约电话</span>
-                  <span class="flex2">17070858288</span>
-                </div>
-                <div class="flexbox">
-                  <span class="flex1">地铁</span>
-                  <span class="flex2">6号线 东湖站 A出口</span>
-                </div>
-
-              </div>
-            </el-card>
-            <!-- 长隆水上乐园 -->
-            <el-card class="box-card sceneryHeader" @click.native="OpenDetail(22)">
-              <div slot="header" class="clearfix flexboxtitle">
-                <span class="Titleflex1">景点</span>
-                <span class="Titleflex2">长隆水上乐园</span>
-              </div>
-              <div class="text item">
-                <div class="flexbox">
-                  <span class="flex1">地址</span>
-                  <span class="flex2">广东省广州市番禺区迎宾路长隆旅游度假区内</span>
-                </div>
-                <div class="flexbox">
-                  <span class="flex1">地铁</span>
-                  <span class="flex2">3/7号线 汉溪长隆 D/E号口</span>
-                </div>
-                <div class="flexbox">
-                  <span class="flex1">备注</span>
-                  <span class="flex2">九月: 09:30 ~ 18:30</span>
-                </div>
-              </div>
-            </el-card>
-            <!-- 长隆欢乐世界 -->
-            <el-card class="box-card sceneryHeader" @click.native="OpenDetail(23)">
-              <div slot="header" class="clearfix flexboxtitle">
-                <span class="Titleflex1">景点</span>
-                <span class="Titleflex2">长隆欢乐世界</span>
-              </div>
-              <div class="text item">
-                <div class="flexbox">
-                  <span class="flex1">地址</span>
-                  <span class="flex2">广东省广州市番禺区迎宾路长隆旅游度假区内</span>
-                </div>
-                <div class="flexbox">
-                  <span class="flex1">地铁</span>
-                  <span class="flex2">3/7号线 汉溪长隆 D/E号口</span>
-                </div>
-                <div class="flexbox">
-                  <span class="flex1">备注</span>
-                  <span class="flex2"></span>
-                </div>
-              </div>
-            </el-card>
+            <!-- 卡片渲染 -->
+            <boxcard v-for="(item,index) in cardDataDay1" :key="index" :data="item">
+            </boxcard>
           </el-collapse-item>
 
           <!-- 美食 -->
@@ -599,277 +126,9 @@
             <template slot="title">
               <div class="TitleLeft">美食</div>
             </template>
-            <!-- 点都德 -->
-            <el-card class="box-card foodHeader" @click.native="OpenDetail(7)">
-              <div slot="header" class="clearfix flexboxtitle">
-                <span class="Titleflex1">美食</span>
-                <span class="Titleflex2">点都德（和兴楼店）</span>
-              </div>
-              <div class="text item">
-                <div class="flexbox">
-                  <span class="flex1">地址</span>
-                  <span class="flex2">林和中路148号(嘉逸豪庭酒店旁)</span>
-                </div>
-                <div class="flexbox">
-                  <span class="flex1">电话</span>
-                  <span class="flex2">
-                    <a href="tel:020-87573586">020-87573586</a>
-                  </span>
-                </div>
-                <div class="flexbox">
-                  <span class="flex1">备注</span>
-                  <span class="flex2">8.8折 周一至周五指定时间<br>步行5分钟(454米) 提前排号<br>凤凰流沙包 四色虾饺 荔湾艇仔粥</span>
-                </div>
-              </div>
-            </el-card>
-            <!-- 喜茶 -->
-            <el-card class="box-card foodHeader" @click.native="OpenDetail(2)">
-              <div slot="header" class="clearfix flexboxtitle">
-                <span class="Titleflex1">美食</span>
-                <span class="Titleflex2">喜茶（东方宝泰店）</span>
-              </div>
-              <div class="text item">
-                <div class="flexbox">
-                  <span class="flex1">地址</span>
-                  <span class="flex2">广州东站东方宝泰B3层大食代附近</span>
-                </div>
-                <div class="flexbox">
-                  <span class="flex1">电话</span>
-                  <span class="flex2">
-                    <a href="tel:020-38615321">020-38615321</a>
-                  </span>
-                </div>
-                <div class="flexbox">
-                  <span class="flex1">地铁</span>
-                  <span class="flex2">3号线 广州东站 G号口</span>
-                </div>
-              </div>
-            </el-card>
-            <!-- 芳叔 -->
-            <el-card class="box-card foodHeader" @click.native="OpenDetail(3)">
-              <div slot="header" class="clearfix flexboxtitle">
-                <span class="Titleflex1">美食</span>
-                <span class="Titleflex2">芳叔（东方宝泰店）</span>
-              </div>
-              <div class="text item">
-                <div class="flexbox">
-                  <span class="flex1">地址</span>
-                  <span class="flex2">广州东站东方宝泰B2层2003B</span>
-                </div>
-                <div class="flexbox">
-                  <span class="flex1">电话</span>
-                  <span class="flex2">
-                    <a href="tel:020-38096403">020-38096403</a>
-                  </span>
-                </div>
-                <div class="flexbox">
-                  <span class="flex1">地铁</span>
-                  <span class="flex2">3号线 广州东站 G号口</span>
-                </div>
-              </div>
-            </el-card>
-            <!-- 陶陶居酒家 -->
-            <el-card class="box-card foodHeader" @click.native="OpenDetail(8)">
-              <div slot="header" class="clearfix flexboxtitle">
-                <span class="Titleflex1">美食</span>
-                <span class="Titleflex2">陶陶居酒家（正佳广场店）</span>
-              </div>
-              <div class="text item">
-                <div class="flexbox">
-                  <span class="flex1">地址</span>
-                  <span class="flex2">天河路228号正佳广场6层C059铺</span>
-                </div>
-                <div class="flexbox">
-                  <span class="flex1">电话</span>
-                  <span class="flex2">
-                    <a href="tel:020-38373301">020-38373301</a>
-                  </span>
-                </div>
-                <div class="flexbox">
-                  <span class="flex1">地铁</span>
-                  <span class="flex2">1号线 体育中心 D3号口</span>
-                </div>
-                <div class="flexbox">
-                  <span class="flex1">备注</span>
-                  <span class="flex2">提前排号<br>陶陶居大虾饺 榴莲天鹅酥 酥皮水牛奶菠萝包</span>
-                </div>
-              </div>
-            </el-card>
-            <!-- 九龙冰室 -->
-            <el-card class="box-card foodHeader" @click.native="OpenDetail(9)">
-              <div slot="header" class="clearfix flexboxtitle">
-                <span class="Titleflex1">美食</span>
-                <span class="Titleflex2">九龙冰室（正佳广场店）</span>
-              </div>
-              <div class="text item">
-                <div class="flexbox">
-                  <span class="flex1">地址</span>
-                  <span class="flex2">天河路228号正佳广场M层E107号~E111号铺</span>
-                </div>
-                <div class="flexbox">
-                  <span class="flex1">电话</span>
-                  <span class="flex2">
-                    <a href="tel:020-38060020">020-38060020</a>
-                  </span>
-                </div>
-                <div class="flexbox">
-                  <span class="flex1">地铁</span>
-                  <span class="flex2">1号线 体育中心 D3号口</span>
-                </div>
-                <div class="flexbox">
-                  <span class="flex1">备注</span>
-                  <span class="flex2">有外卖<br>一口西多士 手摇弹珠奶茶</span>
-                </div>
-              </div>
-            </el-card>
-            <!-- Pelicana百利家炸鸡(正佳广场店) -->
-            <el-card class="box-card foodHeader" @click.native="OpenDetail(10)">
-              <div slot="header" class="clearfix flexboxtitle">
-                <span class="Titleflex1">美食</span>
-                <span class="Titleflex2">Pelicana百利家炸鸡<br>(正佳广场店)</span>
-              </div>
-              <div class="text item">
-                <div class="flexbox">
-                  <span class="flex1">地址</span>
-                  <span class="flex2">天河路228号正佳广场B1层</span>
-                </div>
-                <div class="flexbox">
-                  <span class="flex1">地铁</span>
-                  <span class="flex2">1号线 体育中心 D3号口</span>
-                </div>
-                <div class="flexbox">
-                  <span class="flex1">备注</span>
-                  <span class="flex2">有外卖<br>蒜香鸡翅 薯条</span>
-                </div>
-              </div>
-            </el-card>
-            <!-- 星美乐(天环广场店) -->
-            <el-card class="box-card foodHeader" @click.native="OpenDetail(11)">
-              <div slot="header" class="clearfix flexboxtitle">
-                <span class="Titleflex1">美食</span>
-                <span class="Titleflex2">星美乐(天环广场店)</span>
-              </div>
-              <div class="text item">
-                <div class="flexbox">
-                  <span class="flex1">地址</span>
-                  <span class="flex2">天河路212 214、216、218、220号天环广场ParcCentralB218</span>
-                </div>
-                <div class="flexbox">
-                  <span class="flex1">地铁</span>
-                  <span class="flex2">1号线 体育中心 D3号口</span>
-                </div>
-                <div class="flexbox">
-                  <span class="flex1">备注</span>
-                  <span class="flex2">草莓丹麦酥 绿茶茉莉班戟</span>
-                </div>
-              </div>
-            </el-card>
-            <!-- 炳胜品味(天河店) -->
-            <el-card class="box-card foodHeader" @click.native="OpenDetail(12)">
-              <div slot="header" class="clearfix flexboxtitle">
-                <span class="Titleflex1">美食</span>
-                <span class="Titleflex2">炳胜品味(天河店)</span>
-              </div>
-              <div class="text item">
-                <div class="flexbox">
-                  <span class="flex1">地址</span>
-                  <span class="flex2">天河东路168号石牌酒店1-2楼(近太古汇)</span>
-                </div>
-                <div class="flexbox">
-                  <span class="flex1">地铁</span>
-                  <span class="flex2">3号线 石牌桥 BRT/B口</span>
-                </div>
-                <div class="flexbox">
-                  <span class="flex1">备注</span>
-                  <span class="flex2">两个挑一家去</span>
-                </div>
-              </div>
-            </el-card>
-            <!-- 炳胜品味(珠江新城店) -->
-            <el-card class="box-card foodHeader" @click.native="OpenDetail(13)">
-              <div slot="header" class="clearfix flexboxtitle">
-                <span class="Titleflex1">美食</span>
-                <span class="Titleflex2">炳胜品味(珠江新城店)</span>
-              </div>
-              <div class="text item">
-                <div class="flexbox">
-                  <span class="flex1">地址</span>
-                  <span class="flex2">珠江新城冼村路2号首府大厦1-4楼(省博物馆对面)</span>
-                </div>
-                <div class="flexbox">
-                  <span class="flex1">地铁</span>
-                  <span class="flex2">APM线 大剧院 B号口</span>
-                </div>
-                <div class="flexbox">
-                  <span class="flex1">备注</span>
-                  <span class="flex2">两个挑一家去</span>
-                </div>
-              </div>
-            </el-card>
-            <!-- 仁信双皮奶 -->
-            <el-card class="box-card foodHeader" @click.native="OpenDetail(17)">
-              <div slot="header" class="clearfix flexboxtitle">
-                <span class="Titleflex1">美食</span>
-                <span class="Titleflex2">仁信双皮奶</span>
-              </div>
-              <div class="text item">
-                <div class="flexbox">
-                  <span class="flex1">地址</span>
-                  <span class="flex2">惠福东路553号(近摩登百货)</span>
-                </div>
-                <div class="flexbox">
-                  <span class="flex1">地铁</span>
-                  <span class="flex2">6号线 北京路 AB出口皆可</span>
-                </div>
-                <div class="flexbox">
-                  <span class="flex1">备注</span>
-                  <span class="flex2">红豆双皮奶</span>
-                </div>
-              </div>
-            </el-card>
-            <!-- 百花甜品店 -->
-            <el-card class="box-card foodHeader" @click.native="OpenDetail(18)">
-              <div slot="header" class="clearfix flexboxtitle">
-                <span class="Titleflex1">美食</span>
-                <span class="Titleflex2">百花甜品店</span>
-              </div>
-              <div class="text item">
-                <div class="flexbox">
-                  <span class="flex1">地址</span>
-                  <span class="flex2">文明路210号(近中山图书馆)</span>
-                </div>
-                <div class="flexbox">
-                  <span class="flex1">地铁</span>
-                  <span class="flex2">6号线 北京路 离地铁比较远 可能得骑个摩拜</span>
-                </div>
-                <div class="flexbox">
-                  <span class="flex1">备注</span>
-                  <span class="flex2">红豆沙 凤凰奶糊 木瓜西米露</span>
-                </div>
-              </div>
-            </el-card>
-            <!-- 陶然轩 -->
-            <el-card class="box-card foodHeader" @click.native="OpenDetail(21)">
-              <div slot="header" class="clearfix flexboxtitle">
-                <span class="Titleflex1">美食</span>
-                <span class="Titleflex2">陶然轩-岭南·文博食荟(沙面店)</span>
-              </div>
-              <div class="text item">
-                <div class="flexbox">
-                  <span class="flex1">地址</span>
-                  <span class="flex2">沙面南街50号(近沙面玫瑰园)</span>
-                </div>
-                <div class="flexbox">
-                  <span class="flex1">地铁</span>
-                  <span class="flex2">1/6号线 黄沙 E/F出口</span>
-                </div>
-                <div class="flexbox">
-                  <span class="flex1">备注</span>
-                  <span class="flex2">陶然轩虾饺皇 香滑流沙包</span>
-                </div>
-              </div>
-            </el-card>
-
+            <!-- 卡片渲染 -->
+            <boxcard v-for="(item,index) in cardDataDay1" :key="index" :data="item">
+            </boxcard>
           </el-collapse-item>
 
         </el-collapse>
@@ -881,15 +140,162 @@
 </template>
 
 <script>
+import boxcard from "@/components/box-card";
 export default {
   data() {
     return {
       selected: "1",
-      msg: "Welcome to StarDust's Vue.js App"
+      // 日期数据
+      cardDataDay1: [
+        {
+          Type: "flightHeader",
+          Title: {
+            key: "飞机",
+            value: "全日空航空 NH968"
+          },
+          text: [
+            { key: "时间", value: "01:45 ~ 05:40" },
+            { key: "From", value: "上海浦东国际机场T2" },
+            { key: "To", value: "日本东京羽田航空港" },
+            { key: "备注", value: "携程航班动态" }
+          ],
+          url:
+            "https://m.ctrip.com/webapp/hybrid/schedule/detail.html?navBarStyle=gray&queryDate=2018-05-09&flightNo=NH968&queryType=1&fromurl=https%3A%2F%2Fm.ctrip.com%2Fwebapp%2Fhybrid%2Fschedule%2Fsearch.html"
+        },
+        {
+          Type: "transportHeader",
+          Title: {
+            key: "交通",
+            value: "JR-京急机场线 / 京浜急行電鉄<br>A-都营浅草线"
+          },
+          text: [
+            { value: "<b>JR-京急机场线 / 京浜急行電鉄</b>" },
+            { key: "From", value: "羽田机场国际线航站楼" },
+            { key: "To", value: "泉岳寺" },
+            {
+              value:
+                "<a href='http://www.haneda-tokyo-access.com/cn/sp/'>羽田机场交通指南</a>"
+            },
+            {
+              value:
+                "<a href='http://www.haneda-tokyo-access.com/cn/transport/international.html'>航站楼到车站 & 车站购票指南</a>"
+            },
+            {
+              value:
+                "<a href='http://www.haneda-tokyo-access.com/cn/transport/trainlinemap.html'>京急路线图</a>"
+            },
+            { value: "<b>A-都营浅草线</b>" },
+            { key: "From", value: "泉岳寺" },
+            { key: "To", value: "东日本桥" },
+            {
+              value:
+                "<a href='http://www.tokyometro.jp/lang_en/station/rosen_cs_1803.pdf'>东京地铁线路图</a>"
+            }
+          ],
+          url: ""
+        },
+        {
+          Type: "hotelHeader",
+          Title: {
+            key: "住宿",
+            value: "中央区民宿"
+          },
+          text: [
+            {
+              key: "地址",
+              value:
+                "2 Chome-4-5 Nihonbashibakurochō, 中央区, 东京市 103-0002, 日本"
+            },
+            { key: "房东", value: "Torinoth" },
+            {
+              key: "电话",
+              value: "<a href='tel:+81-70-1254-0906'>+81-70-1254-0906</a>"
+            },
+            {
+              key: "",
+              value: "<a href='tel:+81-90-4436-0906'>+81-90-4436-0906</a>"
+            },
+            { key: "注意事项", value: "禁止吸烟，进屋请穿拖鞋；" },
+            { value: "5月9日12:00后可寄放行李，16:00后可随时入住；" },
+            { value: "5月14日可寄放行李至20:00，11:00后需退房；" },
+            { value: "退房时请勿将任何物品放在冰箱内；" },
+            { value: "除卫生纸外，请勿将任何东西冲进马桶；" },
+            {
+              value: "阳台上有三个大的垃圾箱，请务必把垃圾分类扔进去；"
+            }
+          ],
+          url:
+            "http://google.com/maps/place/2+Chome-4-5+Nihonbashibakuroch%C5%8D%2B%E4%B8%AD%E5%A4%AE%E5%8C%BA%2C+%E4%B8%9C%E4%BA%AC%E5%B8%82+103-0002%2B%E6%97%A5%E6%9C%AC"
+        }
+      ],
+      cardDataDay2: [],
+      cardDataDay3: [],
+      cardDataDay4: [],
+      cardDataDay5: [],
+      cardDataDay6: [
+        {
+          Type: "flightHeader",
+          Title: {
+            key: "飞机",
+            value: "全日空航空 NH967"
+          },
+          text: [
+            { key: "时间", value: "22:30 ~ 00:35" },
+            { key: "From", value: "日本东京羽田航空港" },
+            { key: "To", value: "上海浦东国际机场T2" },
+            { key: "备注", value: "携程航班动态" }
+          ],
+          url:
+            "https://m.ctrip.com/webapp/hybrid/schedule/detail.html?navBarStyle=gray&queryDate=2018-05-14&flightNo=nh967&queryType=1&fromurl=https%3A%2F%2Fm.ctrip.com%2Fwebapp%2Fhybrid%2Fschedule%2Fsearch.html"
+        }
+      ],
+      // 分类数据
+      cardDataFilght: [
+        {
+          Type: "flightHeader",
+          Title: {
+            key: "飞机",
+            value: "全日空航空 NH968"
+          },
+          text: [
+            { key: "日期", value: "2018年5月9日" },
+            { key: "时间", value: "01:45 ~ 05:40" },
+            { key: "From", value: "上海浦东国际机场T2" },
+            { key: "To", value: "日本东京羽田航空港" },
+            { key: "备注", value: "携程航班动态" }
+          ],
+          url:
+            "https://m.ctrip.com/webapp/hybrid/schedule/detail.html?navBarStyle=gray&queryDate=2018-05-09&flightNo=NH968&queryType=1&fromurl=https%3A%2F%2Fm.ctrip.com%2Fwebapp%2Fhybrid%2Fschedule%2Fsearch.html"
+        },
+        {
+          Type: "flightHeader",
+          Title: {
+            key: "飞机",
+            value: "全日空航空 NH967"
+          },
+          text: [
+            { key: "日期", value: "2018年5月14日" },
+            { key: "时间", value: "22:30 ~ 00:35" },
+            { key: "From", value: "日本东京羽田航空港" },
+            { key: "To", value: "上海浦东国际机场T2" },
+            { key: "备注", value: "携程航班动态" }
+          ],
+          url:
+            "https://m.ctrip.com/webapp/hybrid/schedule/detail.html?navBarStyle=gray&queryDate=2018-05-14&flightNo=nh967&queryType=1&fromurl=https%3A%2F%2Fm.ctrip.com%2Fwebapp%2Fhybrid%2Fschedule%2Fsearch.html"
+        }
+      ],
+      cardDataDayTransport: [],
+      cardDataDayHotel: [],
+      cardDataDayFood: [],
+      cardDataDayScenery: []
     };
   },
+  components: {
+    boxcard
+  },
   created() {
-    document.getElementsByTagName("title")[0].innerText = "2018意大利炮征战霓虹";
+    document.getElementsByTagName("title")[0].innerText =
+      "2018意大利炮征战霓虹";
   },
   methods: {
     // 点击card打开详情
