@@ -202,7 +202,7 @@ export default {
           },
           text: [
             {
-              key: "地址",
+              key: "谷歌地图",
               value:
                 "<a href='http://google.com/maps/place/2+Chome-4-5+Nihonbashibakuroch%C5%8D%2B%E4%B8%AD%E5%A4%AE%E5%8C%BA%2C+%E4%B8%9C%E4%BA%AC%E5%B8%82+103-0002%2B%E6%97%A5%E6%9C%AC'>2 Chome-4-5 Nihonbashibakurochō, 中央区, 东京市 103-0002, 日本</a>"
             },
