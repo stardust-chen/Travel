@@ -1,7 +1,5 @@
 <template>
   <div>
-    <!-- <mt-header title="广州移动路书"></mt-header> -->
-    <!-- <div style="height:45px"></div> -->
     <mt-navbar v-model="selected">
       <mt-tab-item id="1">Date</mt-tab-item>
       <mt-tab-item id="2">Category</mt-tab-item>
@@ -90,14 +88,17 @@
       <mt-tab-container-item id="2">
         <!-- 分类模式选项卡内容 -->
         <el-collapse accordion>
-          <!-- 飞机 -->
+          <!-- 交通 -->
           <el-collapse-item>
             <template slot="title">
-              <div class="TitleLeft">飞机</div>
+              <div class="TitleLeft">交通</div>
             </template>
 
             <!-- 卡片渲染 -->
             <boxcard v-for="(item,index) in cardDataFilght" :key="index" :data="item">
+            </boxcard>
+                        <!-- 卡片渲染 -->
+            <boxcard v-for="(item,index) in cardDataDayTransport" :key="index" :data="item">
             </boxcard>
 
           </el-collapse-item>
@@ -107,7 +108,7 @@
               <div class="TitleLeft">酒店</div>
             </template>
             <!-- 卡片渲染 -->
-            <boxcard v-for="(item,index) in cardDataDay1" :key="index" :data="item">
+            <boxcard v-for="(item,index) in cardDataDayHotel" :key="index" :data="item">
             </boxcard>
           </el-collapse-item>
 
@@ -117,7 +118,7 @@
               <div class="TitleLeft">景点</div>
             </template>
             <!-- 卡片渲染 -->
-            <boxcard v-for="(item,index) in cardDataDay1" :key="index" :data="item">
+            <boxcard v-for="(item,index) in cardDataDayScenery" :key="index" :data="item">
             </boxcard>
           </el-collapse-item>
 
@@ -127,7 +128,7 @@
               <div class="TitleLeft">美食</div>
             </template>
             <!-- 卡片渲染 -->
-            <boxcard v-for="(item,index) in cardDataDay1" :key="index" :data="item">
+            <boxcard v-for="(item,index) in cardDataDayFood" :key="index" :data="item">
             </boxcard>
           </el-collapse-item>
 
