@@ -170,6 +170,7 @@ export default {
             value: "JR-京急机场线 / 京浜急行電鉄<br>A-都营浅草线"
           },
           text: [
+            { key: "票价", value: "" },
             { value: "<b>JR-京急机场线 / 京浜急行電鉄</b>" },
             { key: "From", value: "羽田机场国际线航站楼" },
             { key: "To", value: "泉岳寺" },
@@ -226,11 +227,38 @@ export default {
             }
           ],
           url: false
+        },
+        {
+          Type: "sceneryHeader",
+          Title: { key: "景点", value: "台场" },
+          text: [{ key: "", value: "" }],
+          url: false
         }
       ],
-      cardDataDay2: [],
-      cardDataDay3: [],
-      cardDataDay4: [],
+      cardDataDay2: [
+        {
+          Type: "sceneryHeader",
+          Title: { key: "骑车", value: "镰仓江之岛" },
+          text: [{ key: "", value: "" }],
+          url: false
+        }
+      ],
+      cardDataDay3: [
+        {
+          Type: "sceneryHeader",
+          Title: { key: "景点", value: "富士山" },
+          text: [{ key: "", value: "" }],
+          url: false
+        }
+      ],
+      cardDataDay4: [
+        {
+          Type: "sceneryHeader",
+          Title: { key: "景点", value: "秋叶原步行街" },
+          text: [{ key: "", value: "" }],
+          url: false
+        }
+      ],
       cardDataDay5: [],
       cardDataDay6: [
         {
@@ -248,47 +276,44 @@ export default {
           url:
             "https://m.ctrip.com/webapp/hybrid/schedule/detail.html?navBarStyle=gray&queryDate=2018-05-14&flightNo=nh967&queryType=1&fromurl=https%3A%2F%2Fm.ctrip.com%2Fwebapp%2Fhybrid%2Fschedule%2Fsearch.html"
         }
-      ],
-      // 分类数据
-      cardDataFilght: [
-        {
-          Type: "flightHeader",
-          Title: {
-            key: "飞机",
-            value: "全日空航空 NH968"
-          },
-          text: [
-            { key: "日期", value: "2018年5月9日" },
-            { key: "时间", value: "01:45 ~ 05:40" },
-            { key: "From", value: "上海浦东国际机场T2" },
-            { key: "To", value: "日本东京羽田航空港" },
-            { key: "备注", value: "携程航班动态" }
-          ],
-          url:
-            "https://m.ctrip.com/webapp/hybrid/schedule/detail.html?navBarStyle=gray&queryDate=2018-05-09&flightNo=NH968&queryType=1&fromurl=https%3A%2F%2Fm.ctrip.com%2Fwebapp%2Fhybrid%2Fschedule%2Fsearch.html"
-        },
-        {
-          Type: "flightHeader",
-          Title: {
-            key: "飞机",
-            value: "全日空航空 NH967"
-          },
-          text: [
-            { key: "日期", value: "2018年5月14日" },
-            { key: "时间", value: "22:30 ~ 00:35" },
-            { key: "From", value: "日本东京羽田航空港" },
-            { key: "To", value: "上海浦东国际机场T2" },
-            { key: "备注", value: "携程航班动态" }
-          ],
-          url:
-            "https://m.ctrip.com/webapp/hybrid/schedule/detail.html?navBarStyle=gray&queryDate=2018-05-14&flightNo=nh967&queryType=1&fromurl=https%3A%2F%2Fm.ctrip.com%2Fwebapp%2Fhybrid%2Fschedule%2Fsearch.html"
-        }
-      ],
-      cardDataDayTransport: [],
-      cardDataDayHotel: [],
-      cardDataDayFood: [],
-      cardDataDayScenery: []
+      ]
     };
+  },
+  computed: {
+    AllCardInfo() {
+      return this.cardDataDay1.concat(
+        this.cardDataDay2,
+        this.cardDataDay3,
+        this.cardDataDay4,
+        this.cardDataDay5,
+        this.cardDataDay6
+      );
+    },
+    cardDataFilght() {
+      return this.AllCardInfo.filter(item => {
+        return item.Type == "flightHeader";
+      });
+    },
+    cardDataDayTransport() {
+      return this.AllCardInfo.filter(item => {
+        return item.Type == "transportHeader";
+      });
+    },
+    cardDataDayHotel() {
+      return this.AllCardInfo.filter(item => {
+        return item.Type == "hotelHeader";
+      });
+    },
+    cardDataDayFood() {
+      return this.AllCardInfo.filter(item => {
+        return item.Type == "foodHeader";
+      });
+    },
+    cardDataDayScenery() {
+      return this.AllCardInfo.filter(item => {
+        return item.Type == "sceneryHeader";
+      });
+    }
   },
   components: {
     boxcard
