@@ -170,28 +170,28 @@ export default {
             value: "JR-京急机场线 / 京浜急行電鉄<br>A-都营浅草线"
           },
           text: [
-            { key: "票价", value: "" },
-            { value: "<b>JR-京急机场线 / 京浜急行電鉄</b>" },
+            { key: "票价", value: "590日元" },
+            { value: "<b>JR-京急机场线 / 京浜急行電鉄" },
             { key: "From", value: "羽田机场国际线航站楼" },
             { key: "To", value: "泉岳寺" },
             {
               value:
-                "<a href='http://www.haneda-tokyo-access.com/cn/sp/'>羽田机场交通指南</a>"
+                "<a href='http://www.haneda-tokyo-access.com/cn/sp/'>羽田机场交通指南"
             },
             {
               value:
-                "<a href='http://www.haneda-tokyo-access.com/cn/transport/international.html'>航站楼到车站 & 车站购票指南</a>"
+                "<a href='http://www.haneda-tokyo-access.com/cn/transport/international.html'>航站楼到车站 & 车站购票指南"
             },
             {
               value:
-                "<a href='http://www.haneda-tokyo-access.com/cn/transport/trainlinemap.html'>京急路线图</a>"
+                "<a href='http://www.haneda-tokyo-access.com/cn/transport/trainlinemap.html'>京急路线图"
             },
-            { value: "<b>A-都营浅草线</b>" },
+            { value: "<b>A-都营浅草线" },
             { key: "From", value: "泉岳寺" },
             { key: "To", value: "东日本桥" },
             {
               value:
-                "<a href='http://www.tokyometro.jp/lang_en/station/rosen_cs_1803.pdf'>东京地铁线路图</a>"
+                "<a href='http://www.tokyometro.jp/lang_en/station/rosen_cs_1803.pdf'>东京地铁线路图"
             }
           ],
           url: false
@@ -206,16 +206,16 @@ export default {
             {
               key: "谷歌地图",
               value:
-                "<a href='http://google.com/maps/place/2+Chome-4-5+Nihonbashibakuroch%C5%8D%2B%E4%B8%AD%E5%A4%AE%E5%8C%BA%2C+%E4%B8%9C%E4%BA%AC%E5%B8%82+103-0002%2B%E6%97%A5%E6%9C%AC'>2 Chome-4-5 Nihonbashibakurochō, 中央区, 东京市 103-0002, 日本</a>"
+                "<a href='http://google.com/maps/place/2+Chome-4-5+Nihonbashibakuroch%C5%8D%2B%E4%B8%AD%E5%A4%AE%E5%8C%BA%2C+%E4%B8%9C%E4%BA%AC%E5%B8%82+103-0002%2B%E6%97%A5%E6%9C%AC'>2 Chome-4-5 Nihonbashibakurochō, 中央区, 东京市 103-0002, 日本"
             },
             { key: "房东", value: "Torinoth" },
             {
               key: "电话",
-              value: "<a href='tel:+81-70-1254-0906'>+81-70-1254-0906</a>"
+              value: "<a href='tel:+81-70-1254-0906'>+81-70-1254-0906"
             },
             {
               key: "",
-              value: "<a href='tel:+81-90-4436-0906'>+81-90-4436-0906</a>"
+              value: "<a href='tel:+81-90-4436-0906'>+81-90-4436-0906"
             },
             { key: "注意事项", value: "禁止吸烟，进屋请穿拖鞋；" },
             { value: "5月9日12:00后可寄放行李，16:00后可随时入住；" },
@@ -230,23 +230,102 @@ export default {
         },
         {
           Type: "sceneryHeader",
-          Title: { key: "景点", value: "台场" },
-          text: [{ key: "", value: "" }],
+          Title: {
+            key: "景点",
+            value: "天空树Tokyo Skytree"
+          },
+          text: [
+            { key: "", value: "<b>A-都营浅草线" },
+            { key: "To", value: "押上（晴空塔）" },
+            { key: "开放时间", value: "展望台8:00-22:00（21:00停止入场）" },
+            { key: "门票", value: "当日票成人2820日元" },
+            {
+              key: "介绍",
+              value:
+                "<a href='https://m.mafengwo.cn/poi/11977.html'>天空树Tokyo Skytree"
+            },
+            {
+              value:
+                "<a href='https://m.ctrip.com/html5/you/sight/dongjing294/109876.html#ctm_ref=www_hp_bs_lst'>携程购票链接"
+            }
+          ],
+          url: false
+        },
+        {
+          Type: "sceneryHeader",
+          Title: {
+            key: "景点",
+            value: "目黑川赏樱"
+          },
+          text: [
+            { key: "", value: "<b>H-日比谷线" },
+            { key: "To", value: "中目黑" },
+            { key: "开放时间", value: "全天" },
+            {
+              key: "介绍",
+              value:
+                "<a href='https://m.mafengwo.cn/poi/6777538.html'>目黑川Meguro Gawa"
+            }
+          ],
           url: false
         }
       ],
       cardDataDay2: [
         {
           Type: "sceneryHeader",
-          Title: { key: "骑车", value: "镰仓江之岛" },
-          text: [{ key: "", value: "" }],
+          Title: { key: "骑车", value: "东京-镰仓-江之岛" },
+          text: [
+            {
+              key: "Strava路书",
+              value:
+                "<a href='https://www.strava.com/routes/12613154'>东京-镰仓-江之岛"
+            },
+            { key: "总长度", value: "116.2KM" },
+            {
+              key: "途径点",
+              value:
+                "<a href='https://m.mafengwo.cn/poi/6929887.html'>镰仓高校前车站"
+            },
+            {
+              value:
+                "<a href='https://m.mafengwo.cn/poi/18548704.html'>江之岛展望台"
+            }
+          ],
+          url: false
+        },
+        {
+          Type: "sceneryHeader",
+          Title: {
+            key: "景点",
+            value: "台场"
+          },
+          text: [
+            { key: "", value: "<b>百合鸥临海线" },
+            {
+              key: "To",
+              value: "<a href='https://m.mafengwo.cn/poi/12384.html'>台场"
+            },
+            {
+              key: "景点介绍",
+              value:
+                "<a href='https://m.mafengwo.cn/poi/7390777.html'><b>高达博物馆DiverCity Tokyo"
+            },
+            {
+              value:
+                "<a href='https://m.mafengwo.cn/poi/13237.html'><b>日本科学未来馆"
+            },
+            {
+              value:
+                "<a href='https://m.mafengwo.cn/poi/13386.html'><b>富士电视台"
+            }
+          ],
           url: false
         }
       ],
       cardDataDay3: [
         {
           Type: "sceneryHeader",
-          Title: { key: "景点", value: "富士山" },
+          Title: { key: "景点", value: "富士山Mount Fuji" },
           text: [{ key: "", value: "" }],
           url: false
         }
