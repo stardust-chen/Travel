@@ -326,7 +326,68 @@ export default {
         {
           Type: "sceneryHeader",
           Title: { key: "景点", value: "富士山Mount Fuji" },
-          text: [{ key: "", value: "" }],
+          text: [
+            { key: "交通", value: "租车来回" },
+            { key: "费用", value: "人均¥400左右" },
+            {
+              value:
+                "<a href='https://h5.m.taobao.com/trip/travel-detail/index/index.html?id=521694052066&scm=20140635.-2_1_4..0b87615115244660868942181e5f2e&spm=181.8947139.4973919.d0&ttid=&_preProjVer=0.2.132&_projVer=0.3.98'>飞猪租车链接"
+            },
+            {
+              key: "介绍",
+              value: "<a href='https://m.mafengwo.cn/mdd/10747'><b>富士山"
+            },
+            {
+              key: "攻略",
+              value:
+                "<a href='https://m.mafengwo.cn/gonglve/ziyouxing/249.html'>富士山N种玩法大揭秘"
+            }
+          ],
+          url: false
+        },
+        {
+          Type: "sceneryHeader",
+          Title: { key: "景点", value: "河口湖" },
+          text: [
+            {
+              key: "介绍",
+              value: "<a href='https://m.mafengwo.cn/poi/7554.html'><b>河口湖"
+            },
+            {
+              key: "攻略",
+              value:
+                "<a href='https://m.mafengwo.cn/gonglve/ziyouxing/21802.html'>除了观览富士山，河口湖一日游应该这么玩"
+            }
+          ],
+          url: false
+        },
+        {
+          Type: "sceneryHeader",
+          Title: { key: "景点", value: "忍野八海Oshino Hakkai" },
+          text: [
+            {
+              key: "介绍",
+              value:
+                "<a href='https://m.mafengwo.cn/poi/12861.html'><b>忍野八海"
+            }
+          ],
+          url: false
+        },
+        {
+          Type: "sceneryHeader",
+          Title: { key: "景点", value: "新仓山浅间公园" },
+          text: [
+            {
+              key: "介绍",
+              value:
+                "<a href='https://m.mafengwo.cn/poi/8963256.html'><b>新仓山浅间公园"
+            },
+            {
+              key: "攻略",
+              value:
+                "<a href='https://m.mafengwo.cn/gonglve/ziyouxing/21463.html'>远观富士山，新仓山浅间公园比忍野八海更好"
+            }
+          ],
           url: false
         }
       ],
@@ -338,7 +399,63 @@ export default {
           url: false
         }
       ],
-      cardDataDay5: [],
+      cardDataDay5: [
+        {
+          Type: "sceneryHeader",
+          Title: { key: "景点", value: "东京迪士尼海洋乐园" },
+          text: [
+            { key: "", value: "<b>JR京叶线、武藏野线" },
+            { key: "To", value: "舞滨站" },
+            { key: "票价", value: "一日游门票为7400日元/人" },
+            { key: "", value: "<b>1.神秘岛" },
+            { key: "FastPass", value: "地心探险之旅" },
+            { key: "", value: "海底两万里" },
+            { key: "", value: "<b>2.阿拉伯海岸" },
+            { key: "FastPass", value: "神灯剧场" },
+            { key: "", value: "茉莉公主的飞天魔毯" },
+            { key: "", value: "辛巴达传奇之旅" },
+            { key: "", value: "沙漠商队旋转木马" },
+            { key: "", value: "<b>3.失落河三角洲" },
+            { key: "FastPass", value: "水晶骷髅头魔宫" },
+            { key: "FastPass", value: "忿怒双神" },
+            { key: "", value: "迪士尼海洋渡轮航线" },
+            { key: "", value: "<b>4.美国海滨" },
+            { key: "FastPass", value: "惊魂古塔" },
+            { key: "FastPass", value: "玩具总动员疯狂游戏屋" },
+            { key: "", value: "大都会交通工具" },
+            { key: "", value: "迪士尼海洋电气化铁路" },
+            { key: "", value: "龟龟漫谈" },
+            { key: "", value: "迪士尼海洋渡轮航线" },
+            { key: "", value: "<b>5.发现港" },
+            { key: "FastPass", value: "海底巡游艇：尼莫和好友的海洋世界" },
+            { key: "", value: "水上逗趣船" },
+            { key: "", value: "迪士尼海洋电气化铁路" },
+            { key: "", value: "<b>6.美人鱼礁湖" },
+            { key: "FastPass", value: "美人鱼礁湖剧场" },
+            { key: "", value: "小胖的飞鱼云霄飞车" },
+            { key: "", value: "史卡托的寄居蟹" },
+            { key: "", value: "跳跃水母" },
+            { key: "", value: "河豚气球竞赛" },
+            { key: "", value: "旋转海藻杯" },
+            { key: "", value: "爱丽儿游乐场" },
+            { key: "", value: "<b>7.地中海港湾" },
+            { key: "", value: "迪士尼海洋渡轮航线" },
+            { key: "", value: "威尼斯贡多拉游船" },
+            { key: "", value: "要塞探险" },
+            {
+              key: "介绍",
+              value:
+                "<a href='https://m.mafengwo.cn/poi/5441833.html'><b>东京迪士尼海洋乐园"
+            },
+            {
+              key: "攻略",
+              value:
+                "<a href='https://m.mafengwo.cn/gonglve/ziyouxing/21910.html'><b>从白天嗨到夜晚！一篇攻略带你玩转东京迪士尼Sea"
+            }
+          ],
+          url: false
+        }
+      ],
       cardDataDay6: [
         {
           Type: "flightHeader",
