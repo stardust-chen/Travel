@@ -1,16 +1,31 @@
 <template>
   <div>
     <mt-navbar v-model="selected">
+      <mt-tab-item id="0">Notice</mt-tab-item>  
       <mt-tab-item id="1">Date</mt-tab-item>
       <mt-tab-item id="2">Category</mt-tab-item>
     </mt-navbar>
 
     <!-- tab-container -->
     <mt-tab-container v-model="selected">
+      <mt-tab-container-item id="0">
+        <el-collapse accordion v-model="activeNames">
+          <!-- 交通 -->
+          <el-collapse-item name="1">
+            <template slot="title">
+              <div class="TitleLeft">出行前注意事项</div>
+            </template>
+            <!-- 卡片渲染 -->
+            <boxcard v-for="(item,index) in cardNotice" :key="index" :data="item">
+            </boxcard>
+
+          </el-collapse-item>
+        </el-collapse>
+      </mt-tab-container-item>          
       <mt-tab-container-item id="1">
         <!-- <div style="height = 4px;">&nbsp;</div> -->
         <!-- 日期模式选项卡内容 -->
-      <el-collapse accordion>
+        <el-collapse accordion>
           <!-- 5-9 -->
           <el-collapse-item>
             <template slot="title">
@@ -145,7 +160,62 @@ import boxcard from "@/components/box-card";
 export default {
   data() {
     return {
-      selected: "1",
+      activeNames: ["1"],
+      selected: "0",
+      // 注意事项
+      cardNotice: [
+        {
+          Type: "noticeHeader",
+          Title: {},
+          text: [
+            { key: "机场", value: "上海浦东国际机场T2航站楼" },
+            { key: "行李额", value: "2件/人，23公斤/件" },
+            {
+              key: "电话",
+              value: "<a href='tel:4008-828-888'>4008-828-888"
+            },
+            {
+              key: "官网",
+              value:
+                "<a href='http://www.ana.co.jp/asw/wws/cn/c/'>ANA, 全日空航空公司网站 | ANA - China"
+            },
+            {
+              key: "起飞时间",
+              value: "<span style='color: red'><b>5月9日 01:45"
+            },
+            {
+              key: "集合时间",
+              value: "<span style='color: red'><b>5月8日 22:00前"
+            },
+            {
+              key: "集合地点",
+              value: "<span style='color: red'><b>T2全日空航空值机柜台"
+            },
+            { key: "电话卡", value: "每人电话卡已备好，到机场分发" },
+            {
+              key: "日元现金",
+              value: "<span style='color: red'><b>80000日元/人（提前兑换）"
+            },
+            { key: "必备证件", value: "<span style='color: red'><b>护照" },
+            {
+              key: "入境所需<br>电子行程单",
+              value:
+                "飞猪 -> 行程 -> 订单详情 -> 获取行程确认单 -> 发送至邮箱 -> 打印"
+            },
+            {
+              key: "入境填写<br>民宿地址",
+              value:
+                "2 Chome-4-5 Nihonbashibakurochō, Chūō-ku, Tokyo 103-0002, Japan"
+            },
+            {
+              key: "其他物品",
+              value:
+                "自行车、能量粉、备胎、翘胎棒、便携工具、电动打气筒。（气瓶、能量胶不能携带）"
+            }
+          ],
+          url: false
+        }
+      ],
       // 日期数据
       cardDataDay1: [
         {
@@ -242,7 +312,7 @@ export default {
             {
               key: "介绍",
               value:
-                "<a href='https://m.mafengwo.cn/poi/11977.html'>天空树Tokyo Skytree"
+                "<a href='https://m.mafengwo.cn/poi/11977.html'><b>天空树Tokyo Skytree"
             },
             {
               value:
@@ -264,7 +334,7 @@ export default {
             {
               key: "介绍",
               value:
-                "<a href='https://m.mafengwo.cn/poi/6777538.html'>目黑川Meguro Gawa"
+                "<a href='https://m.mafengwo.cn/poi/6777538.html'><b>目黑川Meguro Gawa"
             }
           ],
           url: false
@@ -273,50 +343,55 @@ export default {
       cardDataDay2: [
         {
           Type: "sceneryHeader",
-          Title: { key: "骑车", value: "东京-镰仓-江之岛" },
+          Title: { key: "景点", value: "东京迪士尼海洋乐园" },
           text: [
+            { key: "", value: "<b>JR京叶线、武藏野线" },
+            { key: "To", value: "舞滨站" },
+            { key: "票价", value: "一日游门票为7400日元/人" },
+            { key: "", value: "<b>1.神秘岛" },
+            { key: "FastPass", value: "地心探险之旅" },
+            { key: "", value: "海底两万里" },
+            { key: "", value: "<b>2.阿拉伯海岸" },
+            { key: "FastPass", value: "神灯剧场" },
+            { key: "", value: "茉莉公主的飞天魔毯" },
+            { key: "", value: "辛巴达传奇之旅" },
+            { key: "", value: "沙漠商队旋转木马" },
+            { key: "", value: "<b>3.失落河三角洲" },
+            { key: "FastPass", value: "水晶骷髅头魔宫" },
+            { key: "FastPass", value: "忿怒双神" },
+            { key: "", value: "迪士尼海洋渡轮航线" },
+            { key: "", value: "<b>4.美国海滨" },
+            { key: "FastPass", value: "惊魂古塔" },
+            { key: "FastPass", value: "玩具总动员疯狂游戏屋" },
+            { key: "", value: "大都会交通工具" },
+            { key: "", value: "迪士尼海洋电气化铁路" },
+            { key: "", value: "龟龟漫谈" },
+            { key: "", value: "迪士尼海洋渡轮航线" },
+            { key: "", value: "<b>5.发现港" },
+            { key: "FastPass", value: "海底巡游艇：尼莫和好友的海洋世界" },
+            { key: "", value: "水上逗趣船" },
+            { key: "", value: "迪士尼海洋电气化铁路" },
+            { key: "", value: "<b>6.美人鱼礁湖" },
+            { key: "FastPass", value: "美人鱼礁湖剧场" },
+            { key: "", value: "小胖的飞鱼云霄飞车" },
+            { key: "", value: "史卡托的寄居蟹" },
+            { key: "", value: "跳跃水母" },
+            { key: "", value: "河豚气球竞赛" },
+            { key: "", value: "旋转海藻杯" },
+            { key: "", value: "爱丽儿游乐场" },
+            { key: "", value: "<b>7.地中海港湾" },
+            { key: "", value: "迪士尼海洋渡轮航线" },
+            { key: "", value: "威尼斯贡多拉游船" },
+            { key: "", value: "要塞探险" },
             {
-              key: "Strava路书",
+              key: "介绍",
               value:
-                "<a href='https://www.strava.com/routes/12613154'>东京-镰仓-江之岛"
+                "<a href='https://m.mafengwo.cn/poi/5441833.html'><b>东京迪士尼海洋乐园"
             },
-            { key: "总长度", value: "116.2KM" },
             {
-              key: "途径点",
+              key: "攻略",
               value:
-                "<a href='https://m.mafengwo.cn/poi/6929887.html'>镰仓高校前车站"
-            },
-            {
-              value:
-                "<a href='https://m.mafengwo.cn/poi/18548704.html'>江之岛展望台"
-            }
-          ],
-          url: false
-        },
-        {
-          Type: "sceneryHeader",
-          Title: {
-            key: "景点",
-            value: "台场"
-          },
-          text: [
-            { key: "", value: "<b>百合鸥临海线" },
-            {
-              key: "To",
-              value: "<a href='https://m.mafengwo.cn/poi/12384.html'>台场"
-            },
-            {
-              key: "景点介绍",
-              value:
-                "<a href='https://m.mafengwo.cn/poi/7390777.html'><b>高达博物馆DiverCity Tokyo"
-            },
-            {
-              value:
-                "<a href='https://m.mafengwo.cn/poi/13237.html'><b>日本科学未来馆"
-            },
-            {
-              value:
-                "<a href='https://m.mafengwo.cn/poi/13386.html'><b>富士电视台"
+                "<a href='https://m.mafengwo.cn/gonglve/ziyouxing/21910.html'>从白天嗨到夜晚！一篇攻略带你玩转东京迪士尼Sea"
             }
           ],
           url: false
@@ -397,60 +472,55 @@ export default {
           Title: { key: "景点", value: "秋叶原步行街" },
           text: [{ key: "", value: "" }],
           url: false
+        },
+        {
+          Type: "sceneryHeader",
+          Title: {
+            key: "景点",
+            value: "台场"
+          },
+          text: [
+            { key: "", value: "<b>百合鸥临海线" },
+            {
+              key: "To",
+              value: "<a href='https://m.mafengwo.cn/poi/12384.html'>台场"
+            },
+            {
+              key: "景点介绍",
+              value:
+                "<a href='https://m.mafengwo.cn/poi/7390777.html'><b>高达博物馆DiverCity Tokyo"
+            },
+            {
+              value:
+                "<a href='https://m.mafengwo.cn/poi/13237.html'><b>日本科学未来馆"
+            },
+            {
+              value:
+                "<a href='https://m.mafengwo.cn/poi/13386.html'><b>富士电视台"
+            }
+          ],
+          url: false
         }
       ],
       cardDataDay5: [
         {
           Type: "sceneryHeader",
-          Title: { key: "景点", value: "东京迪士尼海洋乐园" },
+          Title: { key: "骑车", value: "东京-镰仓-江之岛" },
           text: [
-            { key: "", value: "<b>JR京叶线、武藏野线" },
-            { key: "To", value: "舞滨站" },
-            { key: "票价", value: "一日游门票为7400日元/人" },
-            { key: "", value: "<b>1.神秘岛" },
-            { key: "FastPass", value: "地心探险之旅" },
-            { key: "", value: "海底两万里" },
-            { key: "", value: "<b>2.阿拉伯海岸" },
-            { key: "FastPass", value: "神灯剧场" },
-            { key: "", value: "茉莉公主的飞天魔毯" },
-            { key: "", value: "辛巴达传奇之旅" },
-            { key: "", value: "沙漠商队旋转木马" },
-            { key: "", value: "<b>3.失落河三角洲" },
-            { key: "FastPass", value: "水晶骷髅头魔宫" },
-            { key: "FastPass", value: "忿怒双神" },
-            { key: "", value: "迪士尼海洋渡轮航线" },
-            { key: "", value: "<b>4.美国海滨" },
-            { key: "FastPass", value: "惊魂古塔" },
-            { key: "FastPass", value: "玩具总动员疯狂游戏屋" },
-            { key: "", value: "大都会交通工具" },
-            { key: "", value: "迪士尼海洋电气化铁路" },
-            { key: "", value: "龟龟漫谈" },
-            { key: "", value: "迪士尼海洋渡轮航线" },
-            { key: "", value: "<b>5.发现港" },
-            { key: "FastPass", value: "海底巡游艇：尼莫和好友的海洋世界" },
-            { key: "", value: "水上逗趣船" },
-            { key: "", value: "迪士尼海洋电气化铁路" },
-            { key: "", value: "<b>6.美人鱼礁湖" },
-            { key: "FastPass", value: "美人鱼礁湖剧场" },
-            { key: "", value: "小胖的飞鱼云霄飞车" },
-            { key: "", value: "史卡托的寄居蟹" },
-            { key: "", value: "跳跃水母" },
-            { key: "", value: "河豚气球竞赛" },
-            { key: "", value: "旋转海藻杯" },
-            { key: "", value: "爱丽儿游乐场" },
-            { key: "", value: "<b>7.地中海港湾" },
-            { key: "", value: "迪士尼海洋渡轮航线" },
-            { key: "", value: "威尼斯贡多拉游船" },
-            { key: "", value: "要塞探险" },
             {
-              key: "介绍",
+              key: "Strava路书",
               value:
-                "<a href='https://m.mafengwo.cn/poi/5441833.html'><b>东京迪士尼海洋乐园"
+                "<a href='https://www.strava.com/routes/12613154'>东京-镰仓-江之岛"
+            },
+            { key: "总长度", value: "116.2KM" },
+            {
+              key: "途径点",
+              value:
+                "<a href='https://m.mafengwo.cn/poi/6929887.html'><b>镰仓高校前车站"
             },
             {
-              key: "攻略",
               value:
-                "<a href='https://m.mafengwo.cn/gonglve/ziyouxing/21910.html'><b>从白天嗨到夜晚！一篇攻略带你玩转东京迪士尼Sea"
+                "<a href='https://m.mafengwo.cn/poi/18548704.html'><b>江之岛展望台"
             }
           ],
           url: false
@@ -609,6 +679,11 @@ export default {
 
 .sceneryHeader .el-card__header {
   background: #e14da4;
+}
+
+.noticeHeader .el-card__header {
+  background: red;
+  display: none;
 }
 
 .el-collapse-item__content {
