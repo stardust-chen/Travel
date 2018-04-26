@@ -338,6 +338,34 @@ export default {
             }
           ],
           url: false
+        },
+        {
+          Type: "foodHeader",
+          Title: {
+            key: "美食",
+            value: "キセキ食堂 Kiseki Shokudo"
+          },
+          text: [
+            { key: "", value: "<b>JU-高崎线" },
+            { key: "To", value: "上尾" },
+            {
+              key: "地址",
+              value:
+                "<a href='https://www.google.com/maps/dir/2+Chome-4-5+Nihonbashibakuroch%C5%8D,+Ch%C5%AB%C5%8D-ku,+T%C5%8Dky%C5%8D-to+103-0002%E6%97%A5%E6%9C%AC/%E6%97%A5%E6%9C%AC%E3%80%92362-0014+Saitama+Prefecture,+%E4%B8%8A%E5%B0%BE%E5%B8%82%E6%9C%AC%E7%94%BA%EF%BC%93%E4%B8%81%E7%9B%AE%EF%BC%91%EF%BC%91%E2%88%92%EF%BC%91%EF%BC%93+Kiseki+Shokudo/@35.830004,139.6855016,10z/data=!4m8!4m7!1m2!1m1!1s0x60188eadea7e94d1:0xeb07083ed634f942!1m2!1m1!1s0x6018c5f4025d0c19:0x86b42c40c8d188f!3e3'>Kiseki Shokudo, 日本〒362-0014 Saitama Prefecture, 上尾市本町３丁目１１−１３"
+            },
+            {
+              key: "电话",
+              value: "<a href='tel:+81-70-3529-8553'>+81-70-3529-8553"
+            },
+            { key: "开放时间", value: "周一至周五<br>11:00–14:30 17:00–19:30" },
+            { key: "", value: "周六周日<br>休息" },
+            {
+              key: "介绍",
+              value:
+                "<a href='https://www.bilibili.com/video/av21878075?from=search&seid=8317774442469761360'><b>【孤独的美食家】S7EP01：猪肉之路深不可测"
+            }
+          ],
+          url: false
         }
       ],
       cardDataDay2: [
