@@ -8,6 +8,7 @@
     foodHeader: isfoodHeader,
     sceneryHeader: issceneryHeader,
     noticeHeader: isnoticeHeader,
+    shoppingHeader: isshoppingHeader,
     }" 
     @click.native="OpenDetail(data.url)">
         <div slot="header" class="clearfix flexboxtitle">
@@ -44,6 +45,9 @@ export default {
     },
     isnoticeHeader() {
       return this.data.Type == "noticeHeader";
+    },
+    isshoppingHeader() {
+      return this.data.Type == "shoppingHeader";
     }
   },
   //   data() {

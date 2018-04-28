@@ -146,6 +146,15 @@
             <boxcard v-for="(item,index) in cardDataDayFood" :key="index" :data="item">
             </boxcard>
           </el-collapse-item>
+          <!-- 购物 -->
+          <el-collapse-item>
+            <template slot="title">
+              <div class="TitleLeft">购物</div>
+            </template>
+            <!-- 卡片渲染 -->
+            <boxcard v-for="(item,index) in cardDataDayShopping" :key="index" :data="item">
+            </boxcard>
+          </el-collapse-item>
 
         </el-collapse>
 
@@ -496,9 +505,50 @@ export default {
       ],
       cardDataDay4: [
         {
-          Type: "sceneryHeader",
-          Title: { key: "景点", value: "秋叶原步行街" },
-          text: [{ key: "", value: "" }],
+          Type: "shoppingHeader",
+          Title: { key: "购物", value: "秋叶原步行街" },
+          text: [
+            {
+              key: "步行路线",
+              value: "<a href='https://goo.gl/maps/tyuhH79noiD2'>秋叶原电器街"
+            },
+            {
+              key: "商店",
+              value:
+                "<a href='http://m.dianping.com/shop/22992818'>友都八喜(秋叶原店)"
+            },
+            {
+              value:
+                "<a href='http://m.dianping.com/shop/22965937'>世嘉游戏中心"
+            },
+            {
+              value:
+                "<a href='http://m.dianping.com/shop/48004910'>女仆咖啡厅(秋叶原本店)"
+            },
+            {
+              value:
+                "<a href='http://m.dianping.com/shop/58132855'>唐吉诃德(秋叶原店)"
+            }
+          ],
+          url: false
+        },
+        {
+          Type: "shoppingHeader",
+          Title: { key: "购物", value: "高岛屋百货" },
+          text: [
+            { key: "", value: "<b>A-浅草线" },
+            { key: "To", value: "日本桥（东京）" },
+            {
+              key: "导航",
+              value:
+                "<a href='https://goo.gl/maps/bMFCRgiwv962'>中央区日本桥2-4-1"
+            },
+            {
+              key: "美食",
+              value:
+                "<a href='http://m.dianping.com/shop/95065656'>野田岩(日本桥高岛屋店)"
+            }
+          ],
           url: false
         },
         {
@@ -607,6 +657,11 @@ export default {
       return this.AllCardInfo.filter(item => {
         return item.Type == "sceneryHeader";
       });
+    },
+    cardDataDayShopping() {
+      return this.AllCardInfo.filter(item => {
+        return item.Type == "shoppingHeader";
+      });
     }
   },
   components: {
@@ -710,8 +765,11 @@ export default {
 }
 
 .noticeHeader .el-card__header {
-  background: red;
   display: none;
+}
+
+.shoppingHeader .el-card__header {
+  background: #00ffdd;
 }
 
 .el-collapse-item__content {
