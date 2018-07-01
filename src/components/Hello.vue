@@ -1,17 +1,23 @@
 <template>
   <div class="hello">
-    <el-carousel :interval="4000" type="card" height="600px">
+    <el-carousel :interval="1000" type="card" height="600px">
     <el-carousel-item class="div1">
+      <img src="../assets/1.png" alt="1">
     </el-carousel-item>    
     <el-carousel-item class="div2">
+      <img src="../assets/2.png" alt="1">
     </el-carousel-item>    
     <el-carousel-item class="div3">
+      <img src="../assets/3.png" alt="1">
     </el-carousel-item>    
     <el-carousel-item class="div4">
+      <img src="../assets/4.png" alt="1">
     </el-carousel-item>
     <el-carousel-item class="div5">
+      <img src="../assets/5.png" alt="1">
     </el-carousel-item>
     <el-carousel-item class="div6">
+      <img src="../assets/6.png" alt="1">
     </el-carousel-item>
   </el-carousel>
   </div>
@@ -58,8 +64,14 @@ li {
 a {
   color: #42b983;
 }
+img {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+}
 
-.div1 {
+/* .div1 {
   background: url(../assets/1.png) no-repeat center center;
   background-size: 100%;
 }
@@ -82,7 +94,8 @@ a {
 .div6 {
   background: url(../assets/6.png) no-repeat center center;
   background-size: 100%;
-}
+} */
+
 .el-carousel__item h3 {
   /* color: #475669; */
   font-size: 14px;
