@@ -24,8 +24,12 @@ export default new Router({
       path: '/afternoon',
       meta: { title: 'Relax Afternoon' },
       component: () => { return import("@/pages/afternoon") }
+    },
+    {
+      path: '/wuxi',
+      meta: { title: '2019 无锡赏樱' },
+      component: () => { return import("@/pages/wuxi") }
     }
-    // { path: '/Detail/:id', meta: { title: '详细信息' }, component: Detail },
 
   ]
 })
