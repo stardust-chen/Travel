@@ -1,25 +1,6 @@
 <template>
   <div class="hello">
-    <el-carousel :interval="1000" type="card" height="600px">
-    <el-carousel-item class="div1">
-      <img src="../assets/1.png" alt="1">
-    </el-carousel-item>    
-    <el-carousel-item class="div2">
-      <img src="../assets/2.png" alt="1">
-    </el-carousel-item>    
-    <el-carousel-item class="div3">
-      <img src="../assets/3.png" alt="1">
-    </el-carousel-item>    
-    <el-carousel-item class="div4">
-      <img src="../assets/4.png" alt="1">
-    </el-carousel-item>
-    <el-carousel-item class="div5">
-      <img src="../assets/5.png" alt="1">
-    </el-carousel-item>
-    <el-carousel-item class="div6">
-      <img src="../assets/6.png" alt="1">
-    </el-carousel-item>
-  </el-carousel>
+    <h1>{{msg}}</h1>
   </div>
 </template>
 
@@ -33,8 +14,7 @@ export default {
     };
   },
   created() {
-    document.getElementsByTagName("title")[0].innerText = "Relax Afternoon";
-    alert("Aling你好呀~");
+    document.getElementsByTagName("title")[0].innerText = "星尘_StarDust";
   }
 };
 </script>
