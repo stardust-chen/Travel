@@ -139,10 +139,10 @@ export default {
             { key: "", value: "3. 湿巾纸&餐巾纸" },
             { key: "", value: "4. 防晒霜/护肤用品" },
             { key: "", value: "5. 运动相机" },
-            { key: "", value: "<b>6. 身份证" },
+            { key: "", value: "<b>6. 身份证(鼋头渚和拈花湾可刷身份证入园)" },
             { key: "", value: "7. 旅行收纳袋/保鲜袋/垃圾袋" },
-            { key: "注意事项", value: "<a href='https://h5.m.taobao.com/trip/travel-detail/index/index.html?id=536530655910&_fli_newpage=1&_fli_native_ver=9.1.5&categoryId=124866006&gsCallback=536530655910&spm=181.8947139.x2895152.d0-0&ttid=sem.000000735&_projVer=0.3.198'><b>1. 拈花湾门票需要提前一天23:30之前预订！" },
-            { key: "", value: "2. " },
+            { key: "注意事项", value: "1. <b>拈花湾门票需要提前一天23:30之前预订！<a href='https://h5.m.taobao.com/trip/travel-detail/index/index.html?id=536530655910&_fli_newpage=1&_fli_native_ver=9.1.5&categoryId=124866006&gsCallback=536530655910&spm=181.8947139.x2895152.d0-0&ttid=sem.000000735&_projVer=0.3.198'>飞猪购票链接" },
+            { key: "", value: "2. <b>鼋头渚门票早上6:45之前可定今日票，建议还是提前一两天预订！<a href='https://h5.m.taobao.com/trip/travel-detail/index/index.html?id=576481060713&_fli_newpage=1&_fli_native_ver=9.1.5&categoryId=124866006&gsCallback=576481060713&spm=181.8947139.x2895152.d0-0&ttid=sem.000000735&_projVer=0.3.198'>飞猪购票链接" },
           ],
           url: false
         }
@@ -176,110 +176,58 @@ export default {
             value: "拈花湾"
           },
           text: [
-            { key: "快捷导航", value: "" },
+            { key: "快捷导航", value: "<a href='iosamap://navi?sourceApplication=applicationName&poiname=fangheng&poiid=BGVIS&lat=31.490512&lon=120.363823&dev=0&style=2'>无锡市拈花湾" },
+            { key: "停车", value: "拈花湾外围收费停车场<br>淡季每车10元<br>旺季每车20元" },
+            { key: "门票", value: "<a href='https://h5.m.taobao.com/trip/travel-detail/index/index.html?id=536530655910&_fli_newpage=1&_fli_native_ver=9.1.5&categoryId=124866006&gsCallback=536530655910&spm=181.8947139.x2895152.d0-0&ttid=sem.000000735&_projVer=0.3.198'>购票链接" },
+            { key: "", value: "<span style='color: red'><b>无需换票 凭身份证入园</span>" },
+            { key: "时间", value: "票房售票时间9:00 - 21:00；闸口检票时间9:00 - 21:30" },
+            { key: "<span style='color: red'><b>最佳赏樱地</span>", value: "<span style='color: red'><b>指月巷(樱花大道)、云树帆影生态湿地、平常居精品客栈外围及庭院、鹿鸣谷</span>" },
+            { key: "夜景", value: "拈花塔、五灯湖广场、拈花湖3D水幕投影" },
+            { key: "注意事项", value: "1. 进门检票口有拈花湾手册，可以查看节目表演时间和活动！" },
+            { key: "美食", value: "<b>拈花禅食馆" },
+            { key: "", value: "午餐时间：11:00--13:30<br>晚餐时间：17:00--20:30" },
+            { key: "", value: "地址：五灯湖广场 ￥68/人" },
+            { key: "", value: "<b>浣月山房和风禅意餐厅" },
+            { key: "", value: "午餐时间：11:00--14:00<br>晚餐时间：17:00--21:00" },
+            { key: "", value: "地址：平常居内 ￥108/人" },
+            { key: "", value: "<b>拈花锡食" },
+            { key: "", value: "店内有很多无锡特色小吃供选择。荠菜/刀鱼/菜肉馄饨，各种浇头面，鲜肉/蟹黄小笼等等。亲测的蟹黄小笼和刀鱼馄饨，在及格线以上。" },
           ],
           url: false
         },
-
-        // {
-        //   Type: "flightHeader",
-        //   Title: {
-        //     key: "飞机",
-        //     value: "全日空航空 NH968"
-        //   },
-        //   text: [
-        //     { key: "时间", value: "01:45 ~ 05:40" },
-        //     { key: "From", value: "上海浦东国际机场T2" },
-        //     { key: "To", value: "日本东京羽田航空港" },
-        //     { key: "备注", value: "携程航班动态" }
-        //   ],
-        //   url:
-        //     "https://m.ctrip.com/webapp/hybrid/schedule/detail.html?navBarStyle=gray&queryDate=2018-05-09&flightNo=NH968&queryType=1&fromurl=https%3A%2F%2Fm.ctrip.com%2Fwebapp%2Fhybrid%2Fschedule%2Fsearch.html"
-        // },
-        // {
-        //   Type: "transportHeader",
-        //   Title: {
-        //     key: "交通",
-        //     value: "JR-京急机场线 / 京浜急行電鉄<br>A-都营浅草线"
-        //   },
-        //   text: [
-        //     { key: "票价", value: "590日元" },
-        //     { value: "<b>JR-京急机场线 / 京浜急行電鉄" },
-        //     { key: "From", value: "羽田机场国际线航站楼" },
-        //     { key: "To", value: "泉岳寺" },
-        //     {
-        //       value:
-        //         "<a href='http://www.haneda-tokyo-access.com/cn/sp/'>羽田机场交通指南"
-        //     },
-        //     {
-        //       value:
-        //         "<a href='http://www.haneda-tokyo-access.com/cn/transport/international.html'>航站楼到车站 & 车站购票指南"
-        //     },
-        //     {
-        //       value:
-        //         "<a href='http://www.haneda-tokyo-access.com/cn/transport/trainlinemap.html'>京急路线图"
-        //     },
-        //     { value: "<b>A-都营浅草线" },
-        //     { key: "From", value: "泉岳寺" },
-        //     { key: "To", value: "东日本桥" },
-        //     {
-        //       value:
-        //         "<a href='http://www.tokyometro.jp/lang_en/station/rosen_cs_1803.pdf'>东京地铁线路图"
-        //     }
-        //   ],
-        //   url: false
-        // },
-
-
-        // {
-        //   Type: "sceneryHeader",
-        //   Title: {
-        //     key: "景点",
-        //     value: "目黑川赏樱"
-        //   },
-        //   text: [
-        //     { key: "", value: "<b>H-日比谷线" },
-        //     { key: "To", value: "中目黑" },
-        //     { key: "开放时间", value: "全天" },
-        //     {
-        //       key: "介绍",
-        //       value:
-        //         "<a href='https://m.mafengwo.cn/poi/6777538.html'><b>目黑川Meguro Gawa"
-        //     }
-        //   ],
-        //   url: false
-        // },
-        // {
-        //   Type: "foodHeader",
-        //   Title: {
-        //     key: "美食",
-        //     value: "キセキ食堂 Kiseki Shokudo"
-        //   },
-        //   text: [
-        //     { key: "", value: "<b>JU-高崎线" },
-        //     { key: "To", value: "上尾" },
-        //     {
-        //       key: "地址",
-        //       value:
-        //         "<a href='https://www.google.com/maps/dir/2+Chome-4-5+Nihonbashibakuroch%C5%8D,+Ch%C5%AB%C5%8D-ku,+T%C5%8Dky%C5%8D-to+103-0002%E6%97%A5%E6%9C%AC/%E6%97%A5%E6%9C%AC%E3%80%92362-0014+Saitama+Prefecture,+%E4%B8%8A%E5%B0%BE%E5%B8%82%E6%9C%AC%E7%94%BA%EF%BC%93%E4%B8%81%E7%9B%AE%EF%BC%91%EF%BC%91%E2%88%92%EF%BC%91%EF%BC%93+Kiseki+Shokudo/@35.830004,139.6855016,10z/data=!4m8!4m7!1m2!1m1!1s0x60188eadea7e94d1:0xeb07083ed634f942!1m2!1m1!1s0x6018c5f4025d0c19:0x86b42c40c8d188f!3e3'>Kiseki Shokudo, 日本〒362-0014 Saitama Prefecture, 上尾市本町３丁目１１−１３"
-        //     },
-        //     {
-        //       key: "电话",
-        //       value: "<a href='tel:+81-70-3529-8553'>+81-70-3529-8553"
-        //     },
-        //     { key: "开放时间", value: "周一至周五<br>11:00–14:30 17:00–19:30" },
-        //     { key: "", value: "周六周日<br>休息" },
-        //     {
-        //       key: "介绍",
-        //       value:
-        //         "<a href='https://www.bilibili.com/video/av21878075?from=search&seid=8317774442469761360'><b>【孤独的美食家】S7EP01：猪肉之路深不可测"
-        //     }
-        //   ],
-        //   url: false
-        // }
+        {
+          Type: "foodHeader",
+          Title: {
+            key: "美食",
+            value: "拈花禅食馆"
+          },
+          text: [
+            { key: "地址", value: "拈花湾五灯湖广场一笑堂" },
+            { key: "推荐菜", value: "珍菌鲜菇牛肉粒、滴水清香狮子头、瓜仔芙蓉烤鳗鱼" },
+          ],
+          url: 'https://m.dianping.com/shop/98380892'
+        }
       ],
       cardDataDay2: [
+        {
+          Type: "sceneryHeader",
+          Title: {
+            key: "景点",
+            value: "鼋头渚"
+          },
+          text: [
+            { key: "快捷导航", value: "<a href='iosamap://navi?sourceApplication=applicationName&poiname=fangheng&poiid=BGVIS&lat=31.519628&lon=120.234929&dev=0&style=2'>无锡市鼋头渚充山大门" },
+            { key: "开放时间", value: "非冬季：08:00~17:30；冬季：8:30~17:00" },
+            { key: "门票", value: "<a href='https://h5.m.taobao.com/trip/travel-detail/index/index.html?id=576481060713&_fli_newpage=1&_fli_native_ver=9.1.5&categoryId=124866006&gsCallback=576481060713&spm=181.8947139.x2895152.d0-0&ttid=sem.000000735&_projVer=0.3.198'>购票链接" },
+            { key: "<span style='color: red'><b>最佳赏樱地</span>", value: "<span style='color: red'><b>樱花谷、中日友谊林、十里芳径、长春桥</span>" },
+            { key: "步行赏樱线", value: "充山大门 → 充山隐秀 → 挹秀桥 → 樱花林 （赏樱阁、人杰苑） → 樱花谷 （樱缘桥、樱谷流芳 ）→ 长春花漪 → 具境胜境 → 十里芳径" },
+            { key: "骑行赏樱线", value: "充山大门 → 充山隐秀 → 十里芳径 → 樱花谷（樱缘桥、樱谷流芳） → 樱花林（人杰苑、赏樱阁） → 长春花漪 → 具区胜境" },
+            { key: "注意事项", value: "1. 樱花节开幕期间，逢双休日和节假日，鼋头渚景区会实行交通限制单向通行，交通限制将持续到5月中旬春游高峰结束。如果这期间自驾的话，进入鼋头渚景区从双虹桥-鼋渚路-充山门" },
 
+
+          ],
+          url: false
+        },
       ],
     };
   },
