@@ -141,6 +141,7 @@ export default {
             { key: "", value: "5. 运动相机" },
             { key: "", value: "<b>6. 身份证(鼋头渚和拈花湾可刷身份证入园)" },
             { key: "", value: "7. 旅行收纳袋/保鲜袋/垃圾袋" },
+            { key: "", value: "8. 牙刷/电动牙刷" },
             { key: "注意事项", value: "1. <b>拈花湾门票需要提前一天23:30之前预订！<a href='https://h5.m.taobao.com/trip/travel-detail/index/index.html?id=536530655910&_fli_newpage=1&_fli_native_ver=9.1.5&categoryId=124866006&gsCallback=536530655910&spm=181.8947139.x2895152.d0-0&ttid=sem.000000735&_projVer=0.3.198'>飞猪购票链接" },
             { key: "", value: "2. <b>鼋头渚门票早上6:45之前可定今日票，建议还是提前一两天预订！<a href='https://h5.m.taobao.com/trip/travel-detail/index/index.html?id=576481060713&_fli_newpage=1&_fli_native_ver=9.1.5&categoryId=124866006&gsCallback=576481060713&spm=181.8947139.x2895152.d0-0&ttid=sem.000000735&_projVer=0.3.198'>飞猪购票链接" },
           ],
@@ -241,7 +242,7 @@ export default {
             { key: "地址", value: "人民中路恒隆广场5楼509" },
             { key: "推荐菜", value: "蟹粉小笼包、刀鱼小馄饨、太湖三白小馄饨" },
           ],
-          url: 'https://m.dianping.com/shop/543873'
+          url: 'https://m.dianping.com/shop/91586490'
         },
         {
           Type: "foodHeader",
