@@ -129,7 +129,7 @@ export default {
           Type: "noticeHeader",
           Title: {},
           text: [
-            { key: "出发时间", value: "2019-04-13 9:00" },
+            { key: "出发时间", value: "2019-04-13 8:30" },
             { key: "集合地点", value: "<a href='iosamap://navi?sourceApplication=applicationName&poiname=fangheng&poiid=BGVIS&lat=31.186077&lon=121.449466&dev=0&style=2'>女神家楼下" },
             { key: "天气预报", value: "<a href='http://mfj.weather.com.cn/mweather/index.shtml?aid=101020100'>上海当前天气" },
             { key: "", value: "<a href='http://mfj.weather.com.cn/mweather/index.shtml?aid=101190201'>无锡当前天气" },
@@ -142,6 +142,8 @@ export default {
             { key: "", value: "<b>6. 身份证(鼋头渚和拈花湾可刷身份证入园)" },
             { key: "", value: "7. 旅行收纳袋/保鲜袋/垃圾袋" },
             { key: "", value: "8. 牙刷/电动牙刷" },
+            { key: "", value: "9. 洗面奶" },
+            { key: "", value: "10. 牛肉干" },
             { key: "注意事项", value: "1. <b>拈花湾门票需要提前一天23:30之前预订！<a href='https://h5.m.taobao.com/trip/travel-detail/index/index.html?id=536530655910&_fli_newpage=1&_fli_native_ver=9.1.5&categoryId=124866006&gsCallback=536530655910&spm=181.8947139.x2895152.d0-0&ttid=sem.000000735&_projVer=0.3.198'>飞猪购票链接" },
             { key: "", value: "2. <b>鼋头渚门票早上6:45之前可定今日票，建议还是提前一两天预订！<a href='https://h5.m.taobao.com/trip/travel-detail/index/index.html?id=576481060713&_fli_newpage=1&_fli_native_ver=9.1.5&categoryId=124866006&gsCallback=576481060713&spm=181.8947139.x2895152.d0-0&ttid=sem.000000735&_projVer=0.3.198'>飞猪购票链接" },
           ],
