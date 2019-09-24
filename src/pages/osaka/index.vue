@@ -308,6 +308,40 @@ export default {
       ],
       cardDataDay2: [
         {
+          Type: "sceneryHeader",
+          Title: { key: "景点", value: "岚山小火车（岚山下车）" },
+          text: [
+            { key: "票价", value: "JPY 620 <br>所有车站同价<br>5号车厢富贵号同价" },
+            { key: "小火车座位", value: "龟冈 to 嵯峨 左侧 偶数座位" },
+            { key: "", value: "嵯峨 to 龟冈 右侧 奇数座位" },
+            { key: "车票预约", value: "<a target='_blank' href='https://www.westjr.co.jp/global/sc/ticket/route_search/index.html?p=sagano'>西日本旅客铁道株式会社 - 选择列车" },
+            { key: "小火车官网", value: "<a target='_blank' href='https://www.sagano-kanko.co.jp/sc/jikoku.php'>时刻表 | 嵯峨野观光铁道" },
+            { key: "取票", value: "在线上支付时所使用的信用卡7910、预约号码40934、认证号码0124" },
+            { key: "注意事项", value: "富贵号车厢(开放式车厢)车票仅限当日销售。已经先购买预售车票的旅客,请于乘车当日到小火车各站售票口换票。" },
+          ],
+          url: false
+        }, {
+          Type: "sceneryHeader",
+          Title: { key: "景点", value: "天龙寺" },
+          text: [
+            { key: "", value: "" },
+          ],
+          url: false
+        }, {
+          Type: "sceneryHeader",
+          Title: { key: "景点", value: "渡月桥" },
+          text: [
+            { key: "", value: "" },
+          ],
+          url: false
+        }, {
+          Type: "sceneryHeader",
+          Title: { key: "景点", value: "伏见稻荷大社" },
+          text: [
+            { key: "", value: "" },
+          ],
+          url: false
+        }, {
           Type: "hotelHeader",
           Title: {
             key: "住宿",
@@ -328,161 +362,56 @@ export default {
             { key: "早餐", value: "没有早餐" },
           ],
           url: false
-        }, {
-          Type: "sceneryHeader",
-          Title: { key: "景点", value: "岚山小火车（岚山下车）" },
-          text: [
-            { key: "票价", value: "JPY 620 <br>所有车站同价<br>5号车厢富贵号同价" },
-            { key: "小火车座位", value: "龟冈 to 嵯峨 左侧 偶数座位" },
-            { key: "", value: "嵯峨 to 龟冈 右侧 奇数座位" },
-            { key: "车票预约", value: "<a target='_blank' href='https://www.westjr.co.jp/global/sc/ticket/route_search/index.html?p=sagano'>西日本旅客铁道株式会社 - 选择列车" },
-            { key: "小火车官网", value: "<a target='_blank' href='https://www.sagano-kanko.co.jp/sc/jikoku.php'>时刻表 | 嵯峨野观光铁道" },
-            { key: "取票", value: "在线上支付时所使用的信用卡7910、预约号码40934、认证号码0124" },
-            { key: "注意事项", value: "富贵号车厢(开放式车厢)车票仅限当日销售。已经先购买预售车票的旅客,请于乘车当日到小火车各站售票口换票。" },
-          ],
-          url: false
-        }, {
-          Type: "sceneryHeader",
-          Title: { key: "景点", value: "天龙寺" },
-          text: [
-            { key: "交通", value: "租车来回" },
-            { key: "费用", value: "人均¥400左右" },
-          ],
-          url: false
         },
       ],
       cardDataDay3: [
         {
           Type: "sceneryHeader",
-          Title: { key: "景点", value: "岚山" },
+          Title: { key: "景点", value: "清水寺" },
           text: [
-            { key: "交通", value: "租车来回" },
-            { key: "费用", value: "人均¥400左右" },
+            { key: "", value: "" },
+          ],
+          url: false
+        }, {
+          Type: "sceneryHeader",
+          Title: { key: "景点", value: "花见小路" },
+          text: [
+            { key: "", value: "" },
+          ],
+          url: false
+        }, {
+          Type: "sceneryHeader",
+          Title: { key: "景点", value: "三年坂二年坂" },
+          text: [
+            { key: "", value: "" },
           ],
           url: false
         },
-        {
-          Type: "sceneryHeader",
-          Title: { key: "景点", value: "河口湖" },
-          text: [
-            {
-              key: "介绍",
-              value: "<a target='_blank' href='https://m.mafengwo.cn/poi/7554.html'><b>河口湖"
-            },
-            {
-              key: "攻略",
-              value:
-                "<a target='_blank' href='https://m.mafengwo.cn/gonglve/ziyouxing/21802.html'>除了观览富士山，河口湖一日游应该这么玩"
-            }
-          ],
-          url: false
-        },
-        {
-          Type: "sceneryHeader",
-          Title: { key: "景点", value: "忍野八海Oshino Hakkai" },
-          text: [
-            {
-              key: "介绍",
-              value:
-                "<a target='_blank' href='https://m.mafengwo.cn/poi/12861.html'><b>忍野八海"
-            }
-          ],
-          url: false
-        },
-        {
-          Type: "sceneryHeader",
-          Title: { key: "景点", value: "新仓山浅间公园" },
-          text: [
-            {
-              key: "介绍",
-              value:
-                "<a target='_blank' href='https://m.mafengwo.cn/poi/8963256.html'><b>新仓山浅间公园"
-            },
-            {
-              key: "攻略",
-              value:
-                "<a target='_blank' href='https://m.mafengwo.cn/gonglve/ziyouxing/21463.html'>远观富士山，新仓山浅间公园比忍野八海更好"
-            }
-          ],
-          url: false
-        }
       ],
       cardDataDay4: [
         {
-          Type: "shoppingHeader",
-          Title: { key: "购物", value: "秋叶原步行街" },
-          text: [
-            {
-              key: "步行路线",
-              value: "<a target='_blank' href='https://goo.gl/maps/tyuhH79noiD2'>秋叶原电器街"
-            },
-            {
-              key: "商店",
-              value:
-                "<a target='_blank' href='http://m.dianping.com/shop/22992818'>友都八喜(秋叶原店)"
-            },
-            {
-              value:
-                "<a target='_blank' href='http://m.dianping.com/shop/22965937'>世嘉游戏中心"
-            },
-            {
-              value:
-                "<a target='_blank' href='http://m.dianping.com/shop/48004910'>女仆咖啡厅(秋叶原本店)"
-            },
-            {
-              value:
-                "<a target='_blank' href='http://m.dianping.com/shop/58132855'>唐吉诃德(秋叶原店)"
-            }
-          ],
-          url: false
-        },
-        {
-          Type: "shoppingHeader",
-          Title: { key: "购物", value: "高岛屋百货" },
-          text: [
-            { key: "", value: "<b>A-浅草线" },
-            { key: "To", value: "日本桥（东京）" },
-            {
-              key: "导航",
-              value:
-                "<a target='_blank' href='https://goo.gl/maps/bMFCRgiwv962'>中央区日本桥2-4-1"
-            },
-            {
-              key: "美食",
-              value:
-                "<a target='_blank' href='http://m.dianping.com/shop/95065656'>野田岩(日本桥高岛屋店)"
-            }
-          ],
-          url: false
-        },
-        {
           Type: "sceneryHeader",
-          Title: {
-            key: "景点",
-            value: "台场"
-          },
+          Title: { key: "景点", value: "大阪海游馆" },
           text: [
-            { key: "", value: "<b>百合鸥临海线" },
-            {
-              key: "To",
-              value: "<a target='_blank' href='https://m.mafengwo.cn/poi/12384.html'>台场"
-            },
-            {
-              key: "景点介绍",
-              value:
-                "<a target='_blank' href='https://m.mafengwo.cn/poi/7390777.html'><b>高达博物馆DiverCity Tokyo"
-            },
-            {
-              value:
-                "<a target='_blank' href='https://m.mafengwo.cn/poi/13237.html'><b>日本科学未来馆"
-            },
-            {
-              value:
-                "<a target='_blank' href='https://m.mafengwo.cn/poi/13386.html'><b>富士电视台"
-            }
+            { key: "", value: "" },
           ],
           url: false
-        }
+        }, {
+          Type: "sceneryHeader",
+          Title: { key: "景点", value: "圣玛利亚号" },
+          text: [
+            { key: "", value: "" },
+          ],
+          url: false
+        }, {
+          Type: "sceneryHeader",
+          Title: { key: "景点", value: "天保山大摩天轮" },
+          text: [
+            { key: "", value: "" },
+          ],
+          url: false
+        },
+
       ],
       cardDataDay5: [
         {
