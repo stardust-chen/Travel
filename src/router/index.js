@@ -21,6 +21,11 @@ export default new Router({
       component: () => { return import("@/pages/japan") }
     },
     {
+      path: '/Osaka',
+      meta: { title: 'Osaka & Kyoto' },
+      component: () => { return import("@/pages/osaka") }
+    },
+    {
       path: '/afternoon',
       meta: { title: 'Relax Afternoon' },
       component: () => { return import("@/pages/afternoon") }
