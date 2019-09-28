@@ -180,7 +180,7 @@ import boxcard from "@/components/box-card";
 export default {
   data() {
     return {
-      activeNames: ["2"],
+      activeNames: ["5"],
       selected: "1",
       // 注意事项
       cardNotice: [
@@ -324,23 +324,50 @@ export default {
           Type: "sceneryHeader",
           Title: { key: "景点", value: "天龙寺" },
           text: [
-            { key: "", value: "" },
+            {
+              key: "谷歌地图",
+              value:
+                "<a target='_blank' href='" +
+                "https://www.google.com/maps/dir//%E5%A4%A9%E9%BE%99%E5%AF%BA+%EF%BC%96%EF%BC%98+Sagatenryuji+Susukinobabacho,+Ukyo+Ward,+Kyoto,+616-8385%E6%97%A5%E6%9C%AC/@33.1110456,128.5577046,5z/data=!4m7!4m6!1m1!4e2!1m2!1m1!1s0x6001aa01b80f9e93:0xcd9c3edaff3348c0!3e3?hl=zh-CN"
+                + "'>天龙寺"
+            },
+            { key: "门票", value: "庭院 JPY 500<br>诸堂参拜 JPY 300<br>云龙图 JPY 500" },
+            { key: "开放时间", value: "08:30-17:30 停止入场时间:17:00 (03月21日-10月20日)" },
+            { key: "", value: "08:30-17:00 停止入场时间:16:30 (10月21日-次年03月20日)" },
+
           ],
-          url: false
+          url:
+            "https://m.mafengwo.cn/poi/12204.html"
         }, {
           Type: "sceneryHeader",
           Title: { key: "景点", value: "渡月桥" },
           text: [
-            { key: "", value: "" },
+            {
+              key: "谷歌地图",
+              value:
+                "<a target='_blank' href='" +
+                "https://www.google.com/maps/dir//%E6%97%A5%E6%9C%AC%E4%BA%AC%E9%83%BD%E5%BA%9C%E4%BA%AC%E9%83%BD%E5%B8%82%E5%8F%B3%E4%BA%AC%E5%8C%BA+Saganakanoshimacho,+%E6%B8%A1%E6%9C%88%E6%A1%A5/@33.1095817,128.5597151,5z/data=!4m7!4m6!1m1!4e2!1m2!1m1!1s0x6001075514600869:0x3eb8b22c06addcd!3e3?hl=zh-CN"
+                + "'>渡月桥"
+            },
+            { key: "门票", value: "免费" },
           ],
-          url: false
+          url:
+            "https://m.mafengwo.cn/poi/12573.html"
         }, {
           Type: "sceneryHeader",
           Title: { key: "景点", value: "伏见稻荷大社" },
           text: [
-            { key: "", value: "" },
+            {
+              key: "谷歌地图",
+              value:
+                "<a target='_blank' href='" +
+                "https://www.google.com/maps/dir//%E4%BC%8F%E8%A7%81%E7%A8%BB%E8%8D%B7%E5%A4%A7%E7%A4%BE68+Fukakusa+Yabunouchicho,+Fushimi+Ward,+Kyoto,+612-0882%E6%97%A5%E6%9C%AC/@33.0866992,128.6071758,5z/data=!4m7!4m6!1m1!4e2!1m2!1m1!1s0x60010f153d2e6d21:0x7b1aca1c753ae2e9!3e3?hl=zh-CN"
+                + "'>伏见稻荷大社"
+            },
+            { key: "门票", value: "免费" },
           ],
-          url: false
+          url:
+            "https://m.mafengwo.cn/poi/7518.html"
         }, {
           Type: "hotelHeader",
           Title: {
@@ -369,23 +396,72 @@ export default {
           Type: "sceneryHeader",
           Title: { key: "景点", value: "清水寺" },
           text: [
-            { key: "", value: "" },
+            {
+              key: "谷歌地图",
+              value:
+                "<a target='_blank' href='" +
+                "https://www.google.com/maps/dir//%E6%97%A5%E6%9C%AC%E4%BA%AC%E9%83%BD%E5%BA%9C%E4%BA%AC%E9%83%BD%E5%B8%82%E4%B8%9C%E5%B1%B1%E5%8C%BA+Kiyomizu,+1+Chome%E2%88%92294%E6%B8%85%E6%B0%B4%E5%AF%BA/@33.0866992,128.6071758,5z/data=!4m7!4m6!1m1!4e2!1m2!1m1!1s0x600108d385dcfb07:0x62af658650c434ba!3e3?hl=zh-CN"
+                + "'>清水寺"
+            },
+            { key: "门票", value: "JPY 400" },
           ],
-          url: false
+          url:
+            "https://m.mafengwo.cn/poi/7516.html"
         }, {
           Type: "sceneryHeader",
           Title: { key: "景点", value: "花见小路" },
           text: [
+            {
+              key: "谷歌地图",
+              value:
+                "<a target='_blank' href='" +
+                "https://www.google.com/maps/dir//%E8%8A%B1%E8%A7%81%E5%B0%8F%E8%B7%AF+%E8%89%BA%E5%A6%93+%E5%89%8D%E4%BA%AC%E9%83%BD%E8%8A%B1%E8%A1%97%E6%9F%B3%E5%B7%B7+%E6%97%A5%E6%9C%AC%E3%80%92600-8340+Kyoto,+Gionmachi+Minamigawa/@33.1246127,128.6027633,5z/data=!4m7!4m6!1m1!4e2!1m2!1m1!1s0x600108c173e6958f:0x792091361351619b!3e3?hl=zh-CN"
+                + "'>花见小路"
+            },
             { key: "", value: "" },
           ],
-          url: false
+          url:
+            "https://m.mafengwo.cn/poi/29693.html"
         }, {
           Type: "sceneryHeader",
           Title: { key: "景点", value: "三年坂二年坂" },
           text: [
-            { key: "", value: "" },
+            {
+              key: "谷歌地图",
+              value:
+                "<a target='_blank' href='" +
+                "https://www.google.com/maps/dir//三年坂+日本〒605-0862+Kyoto,+Higashiyama+Ward,+Kiyomizu,+2+Chome−221/@33.1209715,128.6056837,5z/data=!4m7!4m6!1m1!4e2!1m2!1m1!1s0x60010879a219f8af:0xa3504d2600725c07!3e3?hl=zh-CN"
+                + "'>三年坂二年坂"
+            },
           ],
-          url: false
+          url:
+            "https://m.mafengwo.cn/poi/6255112.html"
+        }, {
+          Type: "foodHeader",
+          Title: {
+            key: "美食",
+            value: "一兰拉面(梅田芝田店)"
+          },
+          text: [
+            {
+              key: "地址",
+              value:
+                "<a href='" +
+                "http://m.dianping.com/shop/93734204/map"
+                + "'>大阪府 大阪市 北区芝田１丁目３−1 ギャザ阪急B1F"
+            },
+            {
+              key: "电话",
+              value: "<a href='tel:+81-72-4554521'>+81-72-4554521"
+            },
+            {
+              key: "备注",
+              value:
+                "拉面+溏心蛋"
+            }
+          ],
+          url:
+            "https://m.dianping.com/shop/93734204"
         },
       ],
       cardDataDay4: [
@@ -393,54 +469,169 @@ export default {
           Type: "sceneryHeader",
           Title: { key: "景点", value: "大阪海游馆" },
           text: [
-            { key: "", value: "" },
+            {
+              key: "谷歌地图",
+              value:
+                "<a target='_blank' href='" +
+                "https://www.google.com/maps/dir//%E6%97%A5%E6%9C%AC%E5%A4%A7%E9%98%AA%E5%BA%9C%E5%A4%A7%E9%98%AA%E5%B8%82%E6%B8%AF%E5%8C%BA+Kaigandori,+1+Chome%E2%88%921%E2%88%9210%E6%B5%B7%E6%B8%B8%E9%A6%86/@32.9501565,128.4293087,5z/data=!4m7!4m6!1m1!4e2!1m2!1m1!1s0x6000e8f48c0da9cd:0x6f83c520ae082ccc!3e3?hl=zh-CN"
+                + "'>大阪海游馆"
+            },
+            { key: "门票", value: "JPY 2300 成人" },
+            { key: "开放时间", value: "10:00-20:00；停止入场时间:19:00 (04月01日-04月30日,06月01日-07月31日,09月01日-09月30日,11月01日-12月31日 周一-周日)<br>09:30-20:00 (05月01日-05月31日,08月01日-08月31日,10月01日-10月31日 周一-周日)" }
           ],
-          url: false
+          url:
+            "https://m.mafengwo.cn/poi/6255112.html"
         }, {
           Type: "sceneryHeader",
           Title: { key: "景点", value: "圣玛利亚号" },
           text: [
-            { key: "", value: "" },
+            { key: "航行时间", value: "40min" },
+            { key: "游览时间", value: "白天游览 45分钟<br>黄昏游览 60分钟(每小时一班)" },
+            { key: "票价", value: "白天游览 成人:1600日元<br>黄昏游览 成人:2100日元<br>儿童半价" },
           ],
-          url: false
+          url:
+            "https://m.mafengwo.cn/poi/6930642.html"
         }, {
           Type: "sceneryHeader",
           Title: { key: "景点", value: "天保山大摩天轮" },
           text: [
-            { key: "", value: "" },
+            {
+              key: "谷歌地图",
+              value:
+                "<a target='_blank' href='" +
+                "https://www.google.com/maps/dir//%E6%97%A5%E6%9C%AC%E5%A4%A7%E9%98%AA%E5%BA%9C%E5%A4%A7%E9%98%AA%E5%B8%82%E6%B8%AF%E5%8C%BA+Kaigandori,+1+Chome%E2%88%921%E2%88%9210%E5%A4%A9%E4%BF%9D%E5%B1%B1%E6%91%A9%E5%A4%A9%E8%BC%AA/@32.951009,128.4304838,5z/data=!4m7!4m6!1m1!4e2!1m2!1m1!1s0x6000e88b5561e543:0xfe7be2a424a0c226!3e3?hl=zh-CN"
+                + "'>天保山大摩天轮"
+            },
+            { key: "门票", value: "JPY 800 成人" },
+            { key: "开放时间", value: "10:00-22:00；停止售票时间:21:30" },
           ],
-          url: false
+          url:
+            "https://m.mafengwo.cn/poi/12848.html"
         },
 
       ],
       cardDataDay5: [
         {
           Type: "sceneryHeader",
-          Title: { key: "骑车", value: "东京-镰仓-江之岛" },
+          Title: { key: "景点", value: "奈良公园" },
           text: [
             {
-              key: "Strava路书",
+              key: "谷歌地图",
               value:
-                "<a target='_blank' href='https://www.strava.com/routes/12613154'>东京-镰仓-江之岛"
+                "<a target='_blank' href='" +
+                "https://www.google.com/maps/dir//%E6%97%A5%E6%9C%AC%E5%A5%88%E8%89%AF%E5%8E%BF%E5%A5%88%E8%89%AF%E5%B8%82%E5%A5%88%E8%89%AF%E5%85%AC%E5%9B%AD/@32.9649973,128.6367728,5z/data=!4m7!4m6!1m1!4e2!1m2!1m1!1s0x60013996bd8c6061:0xf96cacf357447456!3e3?hl=zh-CN"
+                + "'>奈良公园"
             },
-            { key: "总长度", value: "116.2KM" },
-            {
-              key: "途径点",
-              value:
-                "<a target='_blank' href='https://m.mafengwo.cn/poi/6929887.html'><b>镰仓高校前车站"
-            },
-            {
-              value:
-                "<a target='_blank' href='https://m.mafengwo.cn/poi/18548704.html'><b>江之岛展望台"
-            }
+            { key: "门票", value: "免费" },
           ],
-          url: false
-        }
+          url:
+            "https://m.mafengwo.cn/poi/12415.html"
+        }, {
+          Type: "sceneryHeader",
+          Title: { key: "景点", value: "若草山" },
+          text: [
+            {
+              key: "谷歌地图",
+              value:
+                "<a target='_blank' href='" +
+                "https://www.google.com/maps/dir//%E6%97%A5%E6%9C%AC%E5%A5%88%E8%89%AF%E5%8E%BF%E5%A5%88%E8%89%AF%E5%B8%82+Zoshicho,+%E8%8B%A5%E8%8D%89%E5%B1%B1/@34.6911491,135.8544345,13z/data=!4m7!4m6!1m1!4e2!1m2!1m1!1s0x600139bbcae1062f:0x3ffe7797efcbb75e!3e3?hl=zh-CN"
+                + "'>若草山"
+            },
+            { key: "门票", value: "成人 JPY 150<br>儿童 JPY 80" },
+          ],
+          url:
+            "https://m.mafengwo.cn/poi/6319070.html"
+        }, {
+          Type: "sceneryHeader",
+          Title: { key: "景点", value: "心斋桥" },
+          text: [
+            {
+              key: "谷歌地图",
+              value:
+                "<a target='_blank' href='" +
+                "https://www.google.com/maps/dir//%E5%BF%83%E6%96%8B%E6%A1%A5+%E6%97%A5%E6%9C%AC/@32.9603795,128.4649449,5z/data=!4m7!4m6!1m1!4e2!1m2!1m1!1s0x6000e71a7502e511:0xf52ebb1984ed4516!3e3?hl=zh-CN"
+                + "'>心斋桥"
+            },
+          ],
+          url:
+            "https://m.mafengwo.cn/poi/6418782.html"
+        }, {
+          Type: "sceneryHeader",
+          Title: { key: "景点", value: "道顿堀" },
+          text: [
+            {
+              key: "谷歌地图",
+              value:
+                "<a target='_blank' href='" +
+                "https://www.google.com/maps/dir//%E6%97%A5%E6%9C%AC%E5%A4%A7%E9%98%AA%E5%BA%9C%E5%A4%A7%E9%98%AA%E5%B8%82%E4%B8%AD%E5%A4%AE%E5%8C%BA+Dotonbori,+1+Chome%E2%88%929,+%E9%81%93%E9%A0%93%E5%A0%80/@32.9603795,128.4649449,5z/data=!4m7!4m6!1m1!4e2!1m2!1m1!1s0x6000e713818af9fd:0xb8bb1326b48ba590!3e3?hl=zh-CN"
+                + "'>道顿堀"
+            },
+            { key: "", value: "" },
+          ],
+          url:
+            "https://m.mafengwo.cn/poi/12005592.html"
+        },
       ],
       cardDataDay6: [
+        {
+          Type: "sceneryHeader",
+          Title: { key: "景点", value: "日本环球影城" },
+          text: [
+            {
+              key: "谷歌地图",
+              value:
+                "<a target='_blank' href='" +
+                "https://www.google.com/maps/dir//%E6%97%A5%E6%9C%AC%E5%A4%A7%E9%98%AA%E5%BA%9C%E5%A4%A7%E9%98%AA%E5%B8%82%E6%AD%A4%E8%8A%B1%E5%8C%BA+Sakurajima,+2+Chome%E2%88%921%E2%88%9233%E6%97%A5%E6%9C%AC%E7%8E%AF%E7%90%83%E5%BD%B1%E5%9F%8E/@32.9548509,128.4310602,5z/data=!4m7!4m6!1m1!4e2!1m2!1m1!1s0x6000e0d083d5e25d:0x3605fe25303252aa!3e3?hl=zh-CN"
+                + "'>日本环球影城"
+            },
+            { key: "", value: "" },
+          ],
+          url:
+            "https://m.mafengwo.cn/poi/7538.html"
+        },
       ],
       cardDataDay7: [
         {
+          Type: "sceneryHeader",
+          Title: { key: "景点", value: "临空奥特莱斯" },
+          text: [
+            {
+              key: "谷歌地图",
+              value:
+                "<a target='_blank' href='" +
+                "https://www.google.com/maps/dir//%E6%97%A5%E6%9C%AC%E5%A4%A7%E9%98%AA%E5%BA%9C%E5%A4%A7%E9%98%AA%E5%B8%82%E6%B8%AF%E5%8C%BA+Kaigandori,+1+Chome%E2%88%921%E2%88%9210%E5%A4%A9%E4%BF%9D%E5%B1%B1%E6%91%A9%E5%A4%A9%E8%BC%AA/@32.951009,128.4304838,5z/data=!4m7!4m6!1m1!4e2!1m2!1m1!1s0x6000e88b5561e543:0xfe7be2a424a0c226!3e3?hl=zh-CN"
+                + "'>天保山大摩天轮"
+            },
+            { key: "", value: "" },
+          ],
+          url: false
+        }, {
+          Type: "foodHeader",
+          Title: {
+            key: "美食",
+            value: "松屋(关西机场店)"
+          },
+          text: [
+            {
+              key: "地址",
+              value:
+                "<a href='" +
+                "https://m.dianping.com/shop/32680320/map"
+                + "'>大阪府 泉佐野市 泉州空港北 1 関西国際空港 エアロプラザ　3F"
+            },
+            {
+              key: "电话",
+              value: "<a href='tel:+81-72-4554521'>+81-72-4554521"
+            },
+            {
+              key: "备注",
+              value:
+                "招牌牛肉饭"
+            }
+          ],
+          url:
+            "https://m.dianping.com/shop/32680320"
+        }, {
           Type: "flightHeader",
           Title: {
             key: "飞机",
